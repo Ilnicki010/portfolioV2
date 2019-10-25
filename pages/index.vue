@@ -29,9 +29,11 @@
           <a
             href="https://github.com/Ilnicki010"
             target="_blank"
-            class="button button--ghost"
-            >GitHub</a
+            class="button button--ghost button--github"
           >
+            <i class="fab fa-github"></i>
+            GitHub
+          </a>
         </div>
       </div>
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
@@ -73,5 +75,10 @@ export default {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
+}
+.button--github {
+  i {
+    margin-right: 10px;
+  }
 }
 </style>

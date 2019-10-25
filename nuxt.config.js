@@ -30,6 +30,12 @@ export default {
         href:
           'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap'
       }
+    ],
+    script: [
+      {
+        src: 'https://kit.fontawesome.com/1300197253.js',
+        crossorigin: 'anonymous'
+      }
     ]
   },
   /*
