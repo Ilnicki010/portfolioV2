@@ -1,4 +1,3 @@
-
 <template>
   <div class="mainWrapper">
     <header class="cta-section">
@@ -31,13 +30,18 @@
             href="https://github.com/Ilnicki010"
             target="_blank"
             class="button button--ghost"
-          >GitHub</a>
+            >GitHub</a
+          >
         </div>
       </div>
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
     <main class="projects-wrapper">
-      <project-block v-for="project in myProjects" :key="project.id" :project="project" />
+      <project-block
+        v-for="project in myProjects"
+        :key="project.id"
+        :project="project"
+      />
     </main>
   </div>
 </template>
