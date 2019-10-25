@@ -1,3 +1,4 @@
+
 <template>
   <div class="mainWrapper">
     <header class="cta-section">
@@ -30,18 +31,13 @@
             href="https://github.com/Ilnicki010"
             target="_blank"
             class="button button--ghost"
-            >GitHub</a
-          >
+          >GitHub</a>
         </div>
       </div>
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
     <main class="projects-wrapper">
-      <project-block
-        v-for="project in myProjects"
-        :key="project.id"
-        :project="project"
-      />
+      <project-block v-for="project in myProjects" :key="project.id" :project="project" />
     </main>
   </div>
 </template>
@@ -66,6 +62,7 @@ export default {
   grid-template-rows: 80vh 1fr;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 30px;
+  overflow-x: hidden;
 }
 .cta-section {
   grid-column-start: 1;
@@ -80,6 +77,7 @@ export default {
   .cta-section__navbar {
     display: flex;
     justify-content: center;
+    flex: 1;
 
     img {
       flex: 1;
@@ -122,11 +120,10 @@ export default {
     .cta-section__content__buttons {
       margin-top: 50px;
       display: flex;
+      .button:first-child {
+        margin-right: 25px;
+      }
     }
-  }
-
-  .cta-section__navbar {
-    flex: 1;
   }
 
   .pattern {
@@ -134,7 +131,7 @@ export default {
     top: -100px;
     right: -200px;
     z-index: -9999;
-    max-width: 500px;
+    width: 500px;
   }
 }
 
@@ -146,6 +143,38 @@ export default {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 50px;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 720px) {
+  .cta-section {
+    .cta-section__navbar {
+      ul {
+        flex-direction: column;
+        li {
+          margin: 0 5px;
+        }
+      }
+    }
+    .cta-section__content {
+      min-width: 100%;
+      h1 {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .cta-section__content__buttons {
+        justify-content: flex-start;
+      }
+    }
+  }
+  .mainWrapper {
+    padding: 30px;
+  }
+  .projects-wrapper {
+    grid-gap: 40px;
+    grid-template-columns: auto;
+  }
 }
 </style>

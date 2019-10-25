@@ -44,7 +44,6 @@ a {
   text-align: center;
   position: relative;
   padding: 10px 20px;
-  margin: 0 20px;
   display: block;
   display: flex;
   justify-content: center;
@@ -96,5 +95,14 @@ a {
   font-weight: 800;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 720px) {
+  .button {
+    width: auto;
+  }
+  .main-footer {
+    padding: 40px;
+    justify-content: center;
+  }
 }
 </style>
