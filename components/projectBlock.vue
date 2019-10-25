@@ -53,6 +53,7 @@ export default {
   border-radius: 10px;
   flex: 1;
   height: 400px;
+  max-width: 100%;
   transition: transform 0.2s ease-in-out;
   .project__header {
     padding: 5px 30px;
@@ -81,6 +82,14 @@ export default {
   }
   &:hover {
     transform: translateY(-20px);
+  }
+}
+@media screen and (max-width: 720px) {
+  .projects-wrapper__project {
+    height: 250px;
+    .project__photo {
+      height: 55%;
+    }
   }
 }
 </style>

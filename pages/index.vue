@@ -45,7 +45,6 @@
         :project="project"
       />
     </main>
-    <footer class="main-footer">© Dominik Ilnicki 2019</footer>
   </div>
 </template>
 
@@ -58,14 +57,90 @@ export default {
     return {
       myProjects
     }
-  },
-  mounted() {
-    console.log(this.myProjects)
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.mainWrapper {
+  padding: 20px 70px;
+  display: grid;
+  grid-template-rows: 80vh 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 30px;
+  overflow-x: hidden;
+}
+.cta-section {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  .cta-section__navbar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
+    img {
+      flex: 1;
+      max-width: 100px;
+    }
+
+    ul {
+      flex: 4;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      li {
+        margin: 0 40px;
+      }
+
+      li a {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .cta-section__content {
+    flex: 6;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .cta-section__content__buttons {
+      margin-top: 50px;
+      display: flex;
+      .button:first-child {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .pattern {
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    z-index: -9999;
+    width: 500px;
+  }
+}
+
 .projects-wrapper {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -74,7 +149,39 @@ export default {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 50px;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 720px) {
+  .cta-section {
+    .cta-section__navbar {
+      ul {
+        flex-direction: column;
+        li {
+          margin: 0 5px;
+        }
+      }
+    }
+    .cta-section__content {
+      min-width: 100%;
+      h1 {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .cta-section__content__buttons {
+        justify-content: flex-start;
+      }
+    }
+  }
+  .mainWrapper {
+    padding: 30px;
+  }
+  .projects-wrapper {
+    grid-gap: 40px;
+    grid-template-columns: auto;
+  }
 }
 .button--github {
   i {
