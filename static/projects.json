@@ -2,7 +2,7 @@
     "id": 1,
     "nameID": "justfindschool",
     "name": "Just Find School",
-    "type": "Web app",
+    "type": "Web application",
     "description": "test",
     "mainColor": "#54F2C3",
     "liveDemoLink": "",
@@ -12,13 +12,14 @@
     "id": 2,
     "nameID": "quiz-fighters",
     "name": "Quiz Fighters",
-    "type": "Web app",
+    "type": "Web application",
     "description": "test",
     "mainColor": "#F6F5F8",
     "liveDemoLink": "",
     "ghLink": ""
-  }, {
-    "id": 3,
+  },
+  {
+    "id": 4,
     "nameID": "kaligrafowane",
     "name": "Kaligrafowane",
     "type": "Static website",

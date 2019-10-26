@@ -21,7 +21,12 @@
 </template>
 
 <script>
+import { Flipper, Flipped } from 'vue-flip-toolkit'
 export default {
+  components: {
+    Flipper,
+    Flipped
+  },
   props: {
     project: {
       type: Object,

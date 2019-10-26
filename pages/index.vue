@@ -3,20 +3,7 @@
     <header class="cta-section">
       <nav class="cta-section__navbar">
         <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
-        <ul class="main-menu">
-          <li>
-            <a href>Contact me</a>
-          </li>
-          <li>
-            <a href>My projects</a>
-          </li>
-          <li>
-            <a href>Skills</a>
-          </li>
-          <li>
-            <a href>Resume</a>
-          </li>
-        </ul>
+        <main-menu />
       </nav>
       <div class="cta-section__content">
         <h1>Dominik Ilnicki web developer based in Gdynia Poland</h1>
@@ -39,11 +26,7 @@
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
     <main class="projects-wrapper">
-      <project-block
-        v-for="project in myProjects"
-        :key="project.id"
-        :project="project"
-      />
+      <project-block v-for="project in myProjects" :key="project.nameID" :project="project" />
     </main>
   </div>
 </template>
@@ -51,8 +34,9 @@
 <script>
 import myProjects from '@/static/projects.json'
 import projectBlock from '@/components/projectBlock'
+import mainMenu from '@/components/mainMenu'
 export default {
-  components: { projectBlock },
+  components: { projectBlock, mainMenu },
   data() {
     return {
       myProjects
@@ -69,6 +53,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 30px;
   overflow-x: hidden;
+  position: relative;
 }
 .cta-section {
   grid-column-start: 1;
@@ -88,22 +73,6 @@ export default {
     img {
       flex: 1;
       max-width: 100px;
-    }
-
-    ul {
-      flex: 4;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-
-      li {
-        margin: 0 40px;
-      }
-
-      li a {
-        color: #000;
-        font-weight: 600;
-      }
     }
   }
 

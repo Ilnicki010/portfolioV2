@@ -13,7 +13,9 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-flip-toolkit": "^1.5.0",
+    "vue-overdrive": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
