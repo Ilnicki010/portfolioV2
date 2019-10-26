@@ -4,6 +4,7 @@
     "name": "Just Find School",
     "type": "Web application",
     "description": "test",
+    "stack": ["VUE JS"],
     "mainColor": "#54F2C3",
     "liveDemoLink": "",
     "ghLink": ""
@@ -14,6 +15,7 @@
     "name": "Quiz Fighters",
     "type": "Web application",
     "description": "test",
+    "stack": ["VUE JS"],
     "mainColor": "#F6F5F8",
     "liveDemoLink": "",
     "ghLink": ""
@@ -24,6 +26,7 @@
     "name": "Kaligrafowane",
     "type": "Static website",
     "description": "test",
+    "stack": ["VUE JS"],
     "mainColor": "#F5EBF6",
     "liveDemoLink": "",
     "ghLink": ""

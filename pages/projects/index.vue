@@ -7,28 +7,33 @@
     <div class="projectWrapper__content">
       <div class="content__field">
         <span>Project name</span>
-        <h1>{{ project.name }}</h1>
+        <h1>{{ name }}</h1>
       </div>
       <div class="content__field">
         <span>Description</span>
-        <p>{{ project.description }}</p>
+        <p>{{ description }}</p>
       </div>
       <div class="content__field">
         <span>Stack</span>
         <ul>
-          <li v-for="item in project.stack" :key="item.indexOf">{{ item }}</li>
+          <li v-for="item in stack" :key="stack.indexOf(item)">{{ item }}</li>
         </ul>
       </div>
     </div>
   </div>
 </template>
 <script>
+import myProjects from '@/static/projects.json'
 export default {
-  props: {
-    project: {
-      type: Object,
-      default: null
+  asyncData({ params, env, error, query }) {
+    const project = myProjects.find(
+      (project) => String(project.nameID) === query.name
+    )
+    if (!project) {
+      return error({ message: 'User not found', statusCode: 404 })
     }
+
+    return project
   }
 }
 </script>

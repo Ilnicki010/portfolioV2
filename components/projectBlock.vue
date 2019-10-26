@@ -2,7 +2,7 @@
 <template>
   <nuxt-link
     v-if="project"
-    :to="`/projects/${project.nameID}`"
+    :to="`/projects?name=${project.nameID}`"
     tag="article"
     class="projects-wrapper__project"
     :style="`background: ${project.mainColor}`"
@@ -21,12 +21,7 @@
 </template>
 
 <script>
-import { Flipper, Flipped } from 'vue-flip-toolkit'
 export default {
-  components: {
-    Flipper,
-    Flipped
-  },
   props: {
     project: {
       type: Object,

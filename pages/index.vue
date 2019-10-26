@@ -26,8 +26,15 @@
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
     <main class="projects-wrapper">
-      <project-block v-for="project in myProjects" :key="project.nameID" :project="project" />
+      <project-block
+        v-for="project in myProjects"
+        :key="project.nameID"
+        :project="project"
+      />
     </main>
+    <div class="right">
+      <NuxtChild :key="$route.params.nameID" />
+    </div>
   </div>
 </template>
 

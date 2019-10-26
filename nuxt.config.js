@@ -5,7 +5,8 @@ export default {
    */
   head: {
     title: process.env.npm_package_name || '',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -18,20 +19,24 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: './favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap'
+        href:
+          'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap'
       }
     ],
-    script: [{
-      src: 'https://kit.fontawesome.com/1300197253.js',
-      crossorigin: 'anonymous'
-    }]
+    script: [
+      {
+        src: 'https://kit.fontawesome.com/1300197253.js',
+        crossorigin: 'anonymous'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -52,7 +57,7 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    // '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module'
   ],
   /*
    ** Nuxt.js modules
