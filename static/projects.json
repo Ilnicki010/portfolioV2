@@ -4,7 +4,7 @@
     "name": "Just Find School",
     "type": "Web application",
     "description": "test",
-    "stack": ["VUE JS"],
+    "stack": ["VUE JS", "Mongo DB", "Node JS + Express", "Adobe XD"],
     "mainColor": "#54F2C3",
     "liveDemoLink": "",
     "ghLink": ""
@@ -14,8 +14,8 @@
     "nameID": "quiz-fighters",
     "name": "Quiz Fighters",
     "type": "Web application",
-    "description": "test",
-    "stack": ["VUE JS"],
+    "description": "This project took 1st place in “koduj web app” contents organised by GUS Poland. It is dynamic web application with users authorization. Site makes statistics data more fun and attractive to the young people.",
+    "stack": ["VUE JS", "Firebase Auth", "Mongo DB", "Cloud Functions", "SCSS", "Adobe XD"],
     "mainColor": "#F6F5F8",
     "liveDemoLink": "",
     "ghLink": ""
@@ -25,8 +25,8 @@
     "nameID": "kaligrafowane",
     "name": "Kaligrafowane",
     "type": "Static website",
-    "description": "test",
-    "stack": ["VUE JS"],
+    "description": "Static website for local business. Created in mobile first approach using Nuxt JS. Designed using Adobe XD tool after interview with client. This site scores near 100 points in all Google Audits categories, and It’s close to perfect in W3C HTML & CSS validator.",
+    "stack": ["VUE JS", "Nuxt JS", "SCSS", "Adobe XD"],
     "mainColor": "#F5EBF6",
     "liveDemoLink": "",
     "ghLink": ""

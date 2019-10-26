@@ -1,7 +1,10 @@
 <template>
   <div>
     <nuxt />
-    <footer class="main-footer">© Dominik Ilnicki 2019</footer>
+    <footer class="main-footer">
+      © Dominik Ilnicki 2019
+      <span>/ template free</span>
+    </footer>
   </div>
 </template>
 
@@ -95,6 +98,28 @@ a {
   font-weight: 800;
   display: flex;
   align-items: center;
+  span {
+    font-weight: 100;
+    opacity: 0.4;
+  }
+}
+.default-enter {
+  transform: translateX(100vw);
+}
+.default-enter-active {
+  transition: transform 0.2s ease-out;
+}
+.default-enter-to {
+  transform: translateX(0);
+}
+.default-leave {
+  transform: translateX(0);
+}
+.default-leave-active {
+  transition: transform 0.2s ease-out;
+}
+.default-leave-to {
+  transform: translateX(-100vw);
 }
 @media screen and (max-width: 720px) {
   .button {

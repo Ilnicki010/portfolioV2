@@ -28,14 +28,6 @@ export default {
       default: null
     }
   },
-  computed: {
-    importedImg() {
-      return require('@/assets/projects/kaligrafowane.png')
-    }
-  },
-  mounted() {
-    console.log(this.project.image)
-  },
   methods: {
     getImgUrl(projectName) {
       const images = require.context('../assets/projects/', false, /\.png$/)

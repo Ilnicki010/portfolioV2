@@ -44,6 +44,7 @@ import projectBlock from '@/components/projectBlock'
 import mainMenu from '@/components/mainMenu'
 export default {
   components: { projectBlock, mainMenu },
+  transition: 'default',
   data() {
     return {
       myProjects
