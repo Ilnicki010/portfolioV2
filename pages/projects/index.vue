@@ -177,6 +177,10 @@ export default {
       grid-column-end: 2;
       grid-row-start: 5;
       grid-row-end: 5;
+      justify-content: space-between;
+      .button {
+        flex: 1;
+      }
     }
     .projectWrapper__content {
       grid-column-start: 1;
