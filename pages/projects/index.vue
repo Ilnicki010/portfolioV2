@@ -1,12 +1,11 @@
 <template>
   <div class="projectWrapper">
     <div class="back-link">
-      <nuxt-link to="/"> <i class="fas fa-angle-left"></i>Back </nuxt-link>
+      <nuxt-link to="/">
+        <i class="fas fa-angle-left"></i>Back
+      </nuxt-link>
     </div>
-    <div
-      class="projectWrapper__image-wrapper"
-      :style="`background:${mainColor}`"
-    >
+    <div class="projectWrapper__image-wrapper" :style="`background:${mainColor}`">
       <div
         class="image-wrapper__image"
         :style="{
@@ -15,12 +14,8 @@
       ></div>
     </div>
     <div class="projectWrapper__buttons">
-      <a href class="button button--primary">Visit site</a>
-      <a
-        href="https://github.com/Ilnicki010"
-        target="_blank"
-        class="button button--ghost button--github"
-      >
+      <a :href="liveDemoLink" target="_blank" class="button button--primary">Visit site</a>
+      <a :href="ghLink" target="_blank" class="button button--ghost button--github">
         <i class="fab fa-github"></i>
         Code
       </a>
@@ -41,9 +36,7 @@
             v-for="item in stack"
             :key="stack.indexOf(item)"
             :style="`background:${mainColor}`"
-          >
-            {{ item }}
-          </li>
+          >{{ item }}</li>
         </ul>
       </div>
     </div>

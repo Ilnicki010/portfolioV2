@@ -6,7 +6,7 @@
     "description": "test",
     "stack": ["VUE JS", "Mongo DB", "Node JS + Express", "Adobe XD"],
     "mainColor": "#54F2C3",
-    "liveDemoLink": "",
+    "liveDemoLink": "https://justfindschool.com",
     "ghLink": ""
   },
   {
@@ -17,8 +17,8 @@
     "description": "This project took 1st place in “koduj web app” contents organised by GUS Poland. It is dynamic web application with users authorization. Site makes statistics data more fun and attractive to the young people.",
     "stack": ["VUE JS", "Firebase Auth", "Mongo DB", "Cloud Functions", "SCSS", "Adobe XD"],
     "mainColor": "#F6F5F8",
-    "liveDemoLink": "",
-    "ghLink": ""
+    "liveDemoLink": "https://stoic-aryabhata-79d354.netlify.com/",
+    "ghLink": "https://github.com/Ilnicki010/kodujwebapp"
   },
   {
     "id": 4,
@@ -28,7 +28,7 @@
     "description": "Static website for local business. Created in mobile first approach using Nuxt JS. Designed using Adobe XD tool after interview with client. This site scores near 100 points in all Google Audits categories, and It’s close to perfect in W3C HTML & CSS validator.",
     "stack": ["VUE JS", "Nuxt JS", "SCSS", "Adobe XD"],
     "mainColor": "#F5EBF6",
-    "liveDemoLink": "",
-    "ghLink": ""
+    "liveDemoLink": "https://kaligrafowane.pl",
+    "ghLink": "https://github.com/Ilnicki010/kaligrafowane.pl"
   }
 ]
