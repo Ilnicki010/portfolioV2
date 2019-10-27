@@ -1,24 +1,27 @@
 <template>
-  <div class="main-menu">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <ul class="main-menu__content">
-      <li>
-        <a href>Contact me</a>
-      </li>
-      <li>
-        <a href>My projects</a>
-      </li>
-      <li>
-        <a href>Skills</a>
-      </li>
-      <li>
-        <a href>Resume</a>
-      </li>
-    </ul>
-  </div>
+  <nav class="mainMenuWrapper">
+    <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
+    <div class="main-menu">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul class="main-menu__content">
+        <li>
+          <a href>Contact me</a>
+        </li>
+        <li>
+          <a href>My projects</a>
+        </li>
+        <li>
+          <a href>Skills</a>
+        </li>
+        <li>
+          <a href>Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -26,36 +29,46 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.main-menu {
-  flex: 4;
+.mainMenuWrapper {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  input {
-    display: none;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  img {
+    flex: 1;
+    max-width: 100px;
   }
-  ul {
-    display: flex;
-    li {
-      margin: 0 40px;
-    }
 
-    li a {
-      color: #000;
-      font-weight: 600;
-      padding: 10px 0;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom 0.3s ease-out;
-      &:hover {
-        transform: translateY(0);
-        border-bottom-color: #000;
+  .main-menu {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    input {
+      opacity: 0;
+    }
+    .main-menu__content {
+      display: flex;
+      li {
+        margin: 0 40px;
+        a {
+          font-weight: 600;
+          padding: 10px 0;
+          border-bottom: 2px solid transparent;
+          transition: border-bottom 0.3s ease-out;
+          &:hover {
+            transform: translateY(0);
+            border-bottom-color: #000;
+          }
+        }
       }
     }
   }
 }
 @media screen and (max-width: 720px) {
   .main-menu {
+    padding: 20px;
     position: relative;
     .main-menu__content {
       position: absolute;
@@ -80,6 +93,12 @@ export default {}
         width: 100%;
         font-size: 1.2rem;
         cursor: pointer;
+        a {
+          color: #fff;
+          &:last-child {
+            color: #fff;
+          }
+        }
         &:last-child {
           margin: auto;
           display: block;
@@ -88,12 +107,6 @@ export default {}
           left: 0;
           background: #baf2bb;
           text-align: center;
-          a {
-            color: #000;
-          }
-        }
-        a {
-          color: #fff;
         }
       }
     }
@@ -105,6 +118,7 @@ export default {}
       position: absolute;
       margin: 0;
       padding: 0;
+      top: 0;
       opacity: 0;
       z-index: 99999999;
       transform-origin: 50% 50%;

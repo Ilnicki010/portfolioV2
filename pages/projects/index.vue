@@ -70,7 +70,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .projectWrapper {
-  padding: 70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 48px auto auto;
@@ -157,7 +156,6 @@ export default {
 }
 @media screen and (max-width: 720px) {
   .projectWrapper {
-    padding: 30px;
     grid-template-columns: 1fr;
     grid-template-rows: 48px auto auto;
     grid-row-gap: 40px;

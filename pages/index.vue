@@ -1,10 +1,6 @@
 <template>
   <div class="mainWrapper">
     <header class="cta-section">
-      <nav class="cta-section__navbar">
-        <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
-        <main-menu />
-      </nav>
       <div class="cta-section__content">
         <h1>Dominik Ilnicki web developer based in Gdynia Poland</h1>
         <h2>
@@ -12,7 +8,7 @@
           possible
         </h2>
         <div class="cta-section__content__buttons">
-          <a href class="button button--primary">Contact me</a>
+          <nuxt-link to="/contact" class="button button--primary">Contact me</nuxt-link>
           <a
             href="https://github.com/Ilnicki010"
             target="_blank"
@@ -24,17 +20,11 @@
         </div>
       </div>
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
+      <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
     <main class="projects-wrapper">
-      <project-block
-        v-for="project in myProjects"
-        :key="project.nameID"
-        :project="project"
-      />
+      <project-block v-for="project in myProjects" :key="project.nameID" :project="project" />
     </main>
-    <div class="right">
-      <NuxtChild :key="$route.params.nameID" />
-    </div>
   </div>
 </template>
 
@@ -44,7 +34,6 @@ import projectBlock from '@/components/projectBlock'
 import mainMenu from '@/components/mainMenu'
 export default {
   components: { projectBlock, mainMenu },
-  transition: 'default',
   data() {
     return {
       myProjects
@@ -55,7 +44,6 @@ export default {
 
 <style lang="scss" scoped>
 .mainWrapper {
-  padding: 20px 70px;
   display: grid;
   grid-template-rows: 80vh 1fr;
   grid-template-columns: 1fr 1fr;
@@ -72,17 +60,6 @@ export default {
   justify-content: center;
   flex-direction: column;
   position: relative;
-
-  .cta-section__navbar {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-
-    img {
-      flex: 1;
-      max-width: 100px;
-    }
-  }
 
   .cta-section__content {
     flex: 6;
@@ -110,11 +87,19 @@ export default {
   }
 
   .pattern {
-    position: absolute;
-    top: -100px;
-    right: -200px;
-    z-index: -9999;
-    width: 500px;
+    display: none;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // z-index: -9999;
+    // width: 200px;
+    // &:last-child {
+    //   top: 20px;
+    //   right: 40px;
+    //   z-index: -9999;
+    //   width: 230px;
+    //   transform: rotate(-24deg);
+    // }
   }
 }
 
@@ -127,7 +112,7 @@ export default {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
-  padding-bottom: 40px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 720px) {
   .cta-section {
@@ -152,9 +137,7 @@ export default {
       }
     }
   }
-  .mainWrapper {
-    padding: 30px;
-  }
+
   .projects-wrapper {
     grid-gap: 40px;
     grid-template-columns: auto;

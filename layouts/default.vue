@@ -1,13 +1,20 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="layoutWrapper">
+    <main-menu class="menu" />
+    <nuxt class="content" />
     <footer class="main-footer">
       © Dominik Ilnicki 2019
       <span>/ template free</span>
     </footer>
   </div>
 </template>
-
+<script>
+import mainMenu from '@/components/mainMenu'
+export default {
+  components: { mainMenu },
+  transition: 'default'
+}
+</script>
 <style lang="scss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -38,8 +45,41 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
 }
-
+.layoutWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  overflow-x: hidden;
+  padding: 20px 70px;
+  .menu {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  .content {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  .main-footer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    span {
+      font-weight: 100;
+      opacity: 0.4;
+    }
+  }
+}
 .button {
   border-radius: 4px;
   width: 160px;
@@ -93,16 +133,6 @@ a {
   }
 }
 
-.main-footer {
-  padding: 30px 90px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  span {
-    font-weight: 100;
-    opacity: 0.4;
-  }
-}
 .default-enter {
   transform: translateX(100vw);
 }
@@ -122,11 +152,13 @@ a {
   transform: translateX(-100vw);
 }
 @media screen and (max-width: 720px) {
+  .layoutWrapper {
+    padding: 30px 20px;
+  }
   .button {
     width: auto;
   }
   .main-footer {
-    padding: 40px;
     justify-content: center;
   }
 }
