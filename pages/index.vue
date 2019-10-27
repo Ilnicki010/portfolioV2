@@ -8,9 +8,7 @@
           possible
         </h2>
         <div class="cta-section__content__buttons">
-          <nuxt-link to="/contact" class="button button--primary"
-            >Contact me</nuxt-link
-          >
+          <nuxt-link to="/contact" class="button button--primary">Contact me</nuxt-link>
           <a
             href="https://github.com/Ilnicki010"
             target="_blank"
@@ -25,11 +23,7 @@
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
     <main class="projects-wrapper">
-      <project-block
-        v-for="project in myProjects"
-        :key="project.nameID"
-        :project="project"
-      />
+      <project-block v-for="project in myProjects" :key="project.nameID" :project="project" />
     </main>
   </div>
 </template>
@@ -39,6 +33,7 @@ import myProjects from '@/static/projects.json'
 import projectBlock from '@/components/projectBlock'
 import mainMenu from '@/components/mainMenu'
 export default {
+  transition: 'default',
   components: { projectBlock, mainMenu },
   data() {
     return {

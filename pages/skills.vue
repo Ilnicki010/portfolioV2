@@ -24,7 +24,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  transition: 'default'
+}
 </script>
 
 <style lang="scss" scoped>

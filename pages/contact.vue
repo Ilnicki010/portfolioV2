@@ -1,15 +1,14 @@
 <template>
   <div class="contactWrapper">
     <h1>Want to talk with me?</h1>
-    <h2>
-      The best way to ping me is through the mail dominik.ilnicki@gmail.com
-    </h2>
+    <h2>The best way to ping me is through the mail dominik.ilnicki@gmail.com</h2>
   </div>
 </template>
 
 <script>
 import mainMenu from '@/components/mainMenu'
 export default {
+  transition: 'default',
   components: { mainMenu }
 }
 </script>

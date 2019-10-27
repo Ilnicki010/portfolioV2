@@ -4,16 +4,16 @@
       <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
     </nuxt-link>
     <div class="main-menu">
-      <input id="hamburgerToggle" type="checkbox" />
+      <input @change="turnOffScroll($event)" id="hamburgerToggle" type="checkbox" />
       <span></span>
       <span></span>
       <span></span>
       <ul class="main-menu__content">
         <li>
-          <nuxt-link to="/contact">Contact me</nuxt-link>
+          <nuxt-link to="/">My projects</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">My projects</nuxt-link>
+          <nuxt-link to="/contact">Contact me</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/skills">Skills</nuxt-link>
@@ -31,7 +31,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    turnOffScroll() {
+      console.log('here')
+      if (document.querySelector('#hamburgerToggle').checked) {
+        document.querySelector('body').style.position = 'fixed'
+      } else {
+        document.querySelector('body').style.position = 'relative'
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
