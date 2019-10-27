@@ -15,6 +15,7 @@ export default {
   watch: {
     $route(to, from) {
       document.querySelector('#hamburgerToggle').checked = false
+      document.body.style.position = 'relative'
     }
   }
 }
