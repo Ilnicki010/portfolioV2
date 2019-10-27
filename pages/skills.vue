@@ -2,7 +2,10 @@
   <div class="skillsWrapper">
     <div class="skillsWrapper__content">
       <h1>What can I do for you?</h1>
-      <h2>I'm trying to learn a lot of technologies all the time. I pay attention to performance, accessibility and UI/UX of my web apps.</h2>
+      <h2>
+        I'm trying to learn a lot of technologies all the time. I pay attention
+        to performance, accessibility and UI/UX of my web apps.
+      </h2>
     </div>
     <section class="skillsWrapper__skills-section">
       <h3>My skills</h3>

@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Dominik Ilnicki | frontend developer',
     meta: [
       {
         charset: 'utf-8'
@@ -16,7 +16,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Portfolio website.'
       }
     ],
     link: [

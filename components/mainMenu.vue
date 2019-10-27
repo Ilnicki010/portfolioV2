@@ -4,7 +4,11 @@
       <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
     </nuxt-link>
     <div class="main-menu">
-      <input @change="turnOffScroll($event)" id="hamburgerToggle" type="checkbox" />
+      <input
+        id="hamburgerToggle"
+        type="checkbox"
+        @change="turnOffScroll($event)"
+      />
       <span></span>
       <span></span>
       <span></span>
@@ -23,7 +27,8 @@
             class="resume"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
             target="_blank"
-          >Resume</a>
+            >Resume</a
+          >
         </li>
       </ul>
     </div>
