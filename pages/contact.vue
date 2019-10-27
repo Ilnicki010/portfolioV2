@@ -32,4 +32,15 @@ export default {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 720px) {
+  .contactWrapper {
+    max-width: 100%;
+    h1 {
+      font-size: 1rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+}
 </style>
