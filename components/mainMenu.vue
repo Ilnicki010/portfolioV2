@@ -1,14 +1,10 @@
 <template>
   <nav class="mainMenuWrapper">
     <nuxt-link to="/">
-      <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
+      <logo class="logo" />
     </nuxt-link>
     <div class="main-menu">
-      <input
-        id="hamburgerToggle"
-        type="checkbox"
-        @change="turnOffScroll($event)"
-      />
+      <input id="hamburgerToggle" type="checkbox" @change="turnOffScroll($event)" />
       <span></span>
       <span></span>
       <span></span>
@@ -27,8 +23,7 @@
             class="resume"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
             target="_blank"
-            >Resume</a
-          >
+          >Resume</a>
         </li>
       </ul>
     </div>
@@ -36,7 +31,9 @@
 </template>
 
 <script>
+import Logo from '@/components/Logo'
 export default {
+  components: { Logo },
   methods: {
     turnOffScroll() {
       console.log('here')
@@ -56,9 +53,8 @@ export default {
   justify-content: center;
   flex: 1;
   position: relative;
-  img {
+  .logo {
     flex: 1;
-    max-width: 100px;
   }
 
   .main-menu {
@@ -97,9 +93,9 @@ export default {
       transform-origin: 0% 0%;
       transform: translate(100vh, 0);
       width: calc(100% + 160px);
-      height: 100vh;
+      height: 90vh;
       margin: auto;
-      top: -20px;
+      top: -40px;
       left: -130px;
       z-index: 9999;
       border-radius: 4px;
@@ -125,7 +121,7 @@ export default {
           margin: auto;
           display: block;
           position: absolute;
-          bottom: 30px;
+          bottom: 0;
           left: 0;
           background: #baf2bb;
           text-align: center;
