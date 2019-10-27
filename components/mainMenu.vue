@@ -1,6 +1,8 @@
 <template>
   <nav class="mainMenuWrapper">
-    <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
+    <nuxt-link to="/">
+      <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
+    </nuxt-link>
     <div class="main-menu">
       <input type="checkbox" />
       <span></span>
@@ -8,16 +10,19 @@
       <span></span>
       <ul class="main-menu__content">
         <li>
-          <a href>Contact me</a>
+          <nuxt-link to="/contact">Contact me</nuxt-link>
         </li>
         <li>
-          <a href>My projects</a>
+          <nuxt-link to="/">My projects</nuxt-link>
         </li>
         <li>
           <a href>Skills</a>
         </li>
         <li>
-          <a href>Resume</a>
+          <a
+            href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
+            target="_blank"
+          >Resume</a>
         </li>
       </ul>
     </div>

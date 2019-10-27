@@ -1,11 +1,12 @@
 <template>
   <div class="projectWrapper">
     <div class="back-link">
-      <nuxt-link to="/">
-        <i class="fas fa-angle-left"></i>Back
-      </nuxt-link>
+      <nuxt-link to="/"> <i class="fas fa-angle-left"></i>Back </nuxt-link>
     </div>
-    <div class="projectWrapper__image-wrapper" :style="`background:${mainColor}`">
+    <div
+      class="projectWrapper__image-wrapper"
+      :style="`background:${mainColor}`"
+    >
       <div
         class="image-wrapper__image"
         :style="{
@@ -40,7 +41,9 @@
             v-for="item in stack"
             :key="stack.indexOf(item)"
             :style="`background:${mainColor}`"
-          >{{ item }}</li>
+          >
+            {{ item }}
+          </li>
         </ul>
       </div>
     </div>
