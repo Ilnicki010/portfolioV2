@@ -158,4 +158,35 @@ export default {
     }
   }
 }
+@media screen and (max-width: 720px) {
+  .projectWrapper {
+    padding: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 48px auto auto;
+    grid-row-gap: 40px;
+    grid-column-gap: 0;
+    .back-link {
+      margin-bottom: -40px;
+    }
+    .projectWrapper__image-wrapper {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 3;
+      height: 200px;
+    }
+    .projectWrapper__buttons {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 5;
+      grid-row-end: 5;
+    }
+    .projectWrapper__content {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 4;
+    }
+  }
+}
 </style>
