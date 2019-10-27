@@ -12,7 +12,12 @@
 import mainMenu from '@/components/mainMenu'
 export default {
   components: { mainMenu },
-  transition: 'default'
+  transition: 'default',
+  watch: {
+    $route(to, from) {
+      document.querySelector('#hamburgerToggle').checked = false
+    }
+  }
 }
 </script>
 <style lang="scss">

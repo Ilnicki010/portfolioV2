@@ -4,7 +4,7 @@
       <img src="@/assets/logo.svg" alt="Dominik Ilnicki Logo" />
     </nuxt-link>
     <div class="main-menu">
-      <input type="checkbox" />
+      <input id="hamburgerToggle" type="checkbox" />
       <span></span>
       <span></span>
       <span></span>
@@ -16,10 +16,11 @@
           <nuxt-link to="/">My projects</nuxt-link>
         </li>
         <li>
-          <a href>Skills</a>
+          <nuxt-link to="/skills">Skills</nuxt-link>
         </li>
         <li>
           <a
+            class="resume"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
             target="_blank"
           >Resume</a>
@@ -82,7 +83,7 @@ export default {}
       width: calc(100% + 160px);
       height: 100vh;
       margin: auto;
-      top: 0;
+      top: -20px;
       left: -130px;
       z-index: 9999;
       border-radius: 4px;
@@ -100,9 +101,9 @@ export default {}
         cursor: pointer;
         a {
           color: #fff;
-          &:last-child {
-            color: #fff;
-          }
+        }
+        .resume {
+          color: #000;
         }
         &:last-child {
           margin: auto;
