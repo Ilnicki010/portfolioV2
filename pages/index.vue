@@ -51,7 +51,7 @@ export default {
 <style lang="scss" scoped>
 .mainWrapper {
   display: grid;
-  grid-template-rows: 80vh 1fr;
+  grid-template-rows: 75vh 1fr;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 30px;
   overflow-x: hidden;
@@ -117,7 +117,8 @@ export default {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
+  grid-gap: 40px;
+  padding: 0 10px;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 720px) {

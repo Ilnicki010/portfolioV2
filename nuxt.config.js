@@ -5,7 +5,8 @@ export default {
    */
   head: {
     title: 'Dominik Ilnicki | frontend developer',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -18,24 +19,28 @@ export default {
         content: 'Portfolio website.'
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: './favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap'
+        href:
+          'https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap'
       },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Poppins&display=swap'
       }
     ],
-    script: [{
-      src: 'https://kit.fontawesome.com/1300197253.js',
-      crossorigin: 'anonymous'
-    }]
+    script: [
+      {
+        src: 'https://kit.fontawesome.com/1300197253.js',
+        crossorigin: 'anonymous'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color

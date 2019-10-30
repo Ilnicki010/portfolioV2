@@ -22,6 +22,17 @@
   },
   {
     "id": 4,
+    "nameID": "akademiapamieci",
+    "name": "Akademia Pamięci",
+    "type": "Static website",
+    "description": "Static website for local business. Created in mobile first approach using Nuxt JS. Designed using Adobe XD tool after interview with client. This site scores near 100 points in all Google Audits categories, and It’s close to perfect in W3C HTML & CSS validator.",
+    "stack": ["VUE JS", "Nuxt JS", "SCSS", "Adobe XD"],
+    "mainColor": "#BDAFFF",
+    "liveDemoLink": "https://kaligrafowane.pl",
+    "ghLink": "https://github.com/Ilnicki010/kaligrafowane.pl"
+  },
+  {
+    "id": 5,
     "nameID": "kaligrafowane",
     "name": "Kaligrafowane",
     "type": "Static website",

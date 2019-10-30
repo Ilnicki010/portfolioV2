@@ -7,12 +7,14 @@
       class="projectWrapper__image-wrapper"
       :style="`background:${mainColor}`"
     >
-      <div
-        class="image-wrapper__image"
-        :style="{
-          backgroundImage: 'url(' + getImgUrl(nameID) + ')'
-        }"
-      ></div>
+      <div class="image-wrapper__parent">
+        <div
+          class="image-wrapper__parent__image"
+          :style="{
+            backgroundImage: 'url(' + getImgUrl(nameID) + ')'
+          }"
+        ></div>
+      </div>
     </div>
     <div class="projectWrapper__buttons">
       <a :href="liveDemoLink" target="_blank" class="button button--primary"
@@ -98,18 +100,25 @@ export default {
     border-radius: 10px;
     position: relative;
     height: 50vh;
-    .image-wrapper__image {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 75%;
-      width: 80%;
-      margin: 0 auto;
-      border-radius: 10px 10px 0 0;
-      background-position: center;
-      background-size: cover;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    .image-wrapper__parent {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .image-wrapper__parent__image {
+        position: absolute;
+        margin: 20px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 56.25%;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-position: center;
+        background-size: cover;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+      }
     }
   }
   .projectWrapper__buttons {

@@ -1,6 +1,11 @@
 <template>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="63" viewBox="0 0 143 63">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100"
+      height="63"
+      viewBox="0 0 143 63"
+    >
       <text
         transform="translate(0 26)"
         fill="#222"
@@ -20,5 +25,4 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
