@@ -8,9 +8,7 @@
           possible
         </h2>
         <div class="cta-section__content__buttons">
-          <nuxt-link to="/contact" class="button button--primary"
-            >Contact me</nuxt-link
-          >
+          <nuxt-link to="/contact" class="button button--primary">Contact me</nuxt-link>
           <a
             href="https://github.com/Ilnicki010"
             target="_blank"
@@ -24,12 +22,9 @@
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
       <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
+    <social-menu class="social-menu" />
     <main class="projects-wrapper">
-      <project-block
-        v-for="project in myProjects"
-        :key="project.nameID"
-        :project="project"
-      />
+      <project-block v-for="project in myProjects" :key="project.nameID" :project="project" />
     </main>
   </div>
 </template>
@@ -37,9 +32,10 @@
 <script>
 import myProjects from '@/static/projects.json'
 import projectBlock from '@/components/projectBlock'
+import socialMenu from '@/components/socialMenu'
 export default {
   transition: 'default',
-  components: { projectBlock },
+  components: { projectBlock, socialMenu },
   data() {
     return {
       myProjects
@@ -52,14 +48,20 @@ export default {
 .mainWrapper {
   display: grid;
   grid-template-rows: 75vh 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-row-gap: 30px;
   overflow-x: hidden;
   position: relative;
 }
+.social-menu {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
 .cta-section {
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 1;
   display: flex;
@@ -122,7 +124,24 @@ export default {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 720px) {
+  .mainWrapper {
+    grid-template-rows: 20px 65vh 1fr;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+  }
+  .social-menu {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    align-items: flex-start;
+    display: none;
+  }
   .cta-section {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
     .cta-section__navbar {
       ul {
         flex-direction: column;
@@ -148,6 +167,9 @@ export default {
   .projects-wrapper {
     grid-gap: 40px;
     grid-template-columns: auto;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
   }
 }
 .button--github {
