@@ -71,7 +71,6 @@ export default {
 
   .cta-section__content {
     flex: 6;
-    max-width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
