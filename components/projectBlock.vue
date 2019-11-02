@@ -48,11 +48,10 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 400px;
   max-width: 100%;
   transition: transform 0.2s ease-in-out;
   .project__header {
-    padding: 5px 30px;
+    padding: 20px 30px;
     flex: 1;
     .project__label {
       opacity: 0.6;
@@ -65,10 +64,6 @@ export default {
     position: relative;
     flex: 3;
     .project__photo {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
       padding-bottom: 56.25%;
       margin: 0 auto;
       border-radius: 10px;
@@ -83,7 +78,6 @@ export default {
 }
 @media screen and (max-width: 720px) {
   .projects-wrapper__project {
-    height: 40vh;
     .project__photo {
       height: 55%;
     }

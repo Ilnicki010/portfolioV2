@@ -11,13 +11,7 @@
 <script>
 import mainMenu from '@/components/mainMenu'
 export default {
-  components: { mainMenu },
-  watch: {
-    $route(to, from) {
-      document.querySelector('#hamburgerToggle').checked = false
-      document.body.style.position = 'relative'
-    }
-  }
+  components: { mainMenu }
 }
 </script>
 <style lang="scss">

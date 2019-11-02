@@ -2,7 +2,10 @@
   <div class="contactWrapper">
     <h1>Want to talk with me?</h1>
     <h2>
-      The best way to ping me is through the mail dominik.ilnicki@gmail.com
+      The best way is to ping me via email
+      <a
+        href="mailto:dominik.ilnicki@gmail.com"
+      >dominik.ilnicki@gmail.com</a>
     </h2>
   </div>
 </template>
@@ -31,6 +34,9 @@ export default {
 
   h2 {
     font-size: 2rem;
+    a {
+      text-decoration: underline;
+    }
   }
 }
 @media screen and (max-width: 720px) {

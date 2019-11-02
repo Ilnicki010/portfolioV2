@@ -2,11 +2,8 @@
   <div class="mainWrapper">
     <header class="cta-section">
       <div class="cta-section__content">
-        <h1>Dominik Ilnicki web developer based in Gdynia Poland</h1>
-        <h2>
-          Hi I’m working on web projects to make user experiences best as it is
-          possible
-        </h2>
+        <h1>Dominik Ilnicki, web developer based in Gdynia Poland</h1>
+        <h2>Hi I’m working on web projects to make users experiences as best as it is possible</h2>
         <div class="cta-section__content__buttons">
           <nuxt-link to="/contact" class="button button--primary">Contact me</nuxt-link>
           <a

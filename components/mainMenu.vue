@@ -4,31 +4,26 @@
       <logo class="logo" />
     </nuxt-link>
     <div class="main-menu">
-      <input
-        id="hamburgerToggle"
-        type="checkbox"
-        @change="turnOffScroll($event)"
-      />
+      <input id="hamburgerToggle" type="checkbox" @change="turnOffScroll($event)" />
       <span></span>
       <span></span>
       <span></span>
       <ul class="main-menu__content">
-        <li>
+        <li @click="closeMenu">
           <nuxt-link to="/">My projects</nuxt-link>
         </li>
-        <li>
+        <li @click="closeMenu">
           <nuxt-link to="/contact">Contact me</nuxt-link>
         </li>
-        <li>
+        <li @click="closeMenu">
           <nuxt-link to="/skills">Skills</nuxt-link>
         </li>
-        <li>
+        <li @click="closeMenu">
           <a
             class="resume"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
             target="_blank"
-            >Resume</a
-          >
+          >Resume</a>
         </li>
       </ul>
     </div>
@@ -40,6 +35,10 @@ import Logo from '@/components/Logo'
 export default {
   components: { Logo },
   methods: {
+    closeMenu() {
+      document.querySelector('#hamburgerToggle').checked = false
+      document.body.style.position = 'relative'
+    },
     turnOffScroll() {
       console.log('here')
       if (document.querySelector('#hamburgerToggle').checked) {
@@ -103,7 +102,6 @@ export default {
       top: -40px;
       left: -130px;
       z-index: 9999;
-      border-radius: 4px;
       flex-direction: column;
       justify-content: center;
       align-items: center;

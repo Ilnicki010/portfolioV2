@@ -3,11 +3,11 @@
     "nameID": "justfindschool",
     "name": "Just Find School",
     "type": "Web application",
-    "description": "Decription soon...",
-    "stack": ["VUE JS", "Mongo DB", "Node JS + Express", "Adobe XD"],
+    "description": "Web app allowing teenagers to rate their highschool in 4 categories and leave textual opinion. It was used by over 1k useres whos left over 350 rates. I made whole design, back-end and front-end on my own.",
+    "stack": ["VUE JS", "REST API", "Mongo DB", "Node JS + Express", "Adobe XD"],
     "mainColor": "#54F2C3",
     "liveDemoLink": "https://justfindschool.com",
-    "ghLink": ""
+    "ghLink": "https://github.com/Ilnicki010/justFindSchool"
   },
   {
     "id": 2,
@@ -28,8 +28,8 @@
     "description": "Static website for local business. Created in mobile first approach using Nuxt JS. Designed using Adobe XD tool after interview with client. This site scores near 100 points in all Google Audits categories, and It’s close to perfect in W3C HTML & CSS validator.",
     "stack": ["VUE JS", "Nuxt JS", "SCSS", "Adobe XD"],
     "mainColor": "#BDAFFF",
-    "liveDemoLink": "https://kaligrafowane.pl",
-    "ghLink": "https://github.com/Ilnicki010/kaligrafowane.pl"
+    "liveDemoLink": "https://akademiapamiecigdynia.pl",
+    "ghLink": "https://github.com/Ilnicki010/akademia-pamieci"
   },
   {
     "id": 5,
@@ -39,7 +39,7 @@
     "description": "Static website for local business. Created in mobile first approach using Nuxt JS. Designed using Adobe XD tool after interview with client. This site scores near 100 points in all Google Audits categories, and It’s close to perfect in W3C HTML & CSS validator.",
     "stack": ["VUE JS", "Nuxt JS", "SCSS", "Adobe XD"],
     "mainColor": "#F5EBF6",
-    "liveDemoLink": "https://akademiapamiecigdynia.pl",
-    "ghLink": "https://github.com/Ilnicki010/"
+    "liveDemoLink": "https://kaligrafowane.pl",
+    "ghLink": "https://github.com/Ilnicki010/kaligrafowane.pl"
   }
 ]
