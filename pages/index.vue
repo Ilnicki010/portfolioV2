@@ -3,9 +3,14 @@
     <header class="cta-section">
       <div class="cta-section__content">
         <h1>Dominik Ilnicki, web developer based in Gdynia Poland</h1>
-        <h2>Hi I’m working on web projects to make users experiences as best as it is possible</h2>
+        <h2>
+          Hi I’m working on web projects to make users experiences as best as it
+          is possible
+        </h2>
         <div class="cta-section__content__buttons">
-          <nuxt-link to="/contact" class="button button--primary">Contact me</nuxt-link>
+          <nuxt-link to="/contact" class="button button--primary"
+            >Contact me</nuxt-link
+          >
           <a
             href="https://github.com/Ilnicki010"
             target="_blank"
@@ -21,7 +26,11 @@
     </header>
     <social-menu class="social-menu" />
     <main class="projects-wrapper">
-      <project-block v-for="project in myProjects" :key="project.nameID" :project="project" />
+      <project-block
+        v-for="project in myProjects"
+        :key="project.nameID"
+        :project="project"
+      />
     </main>
   </div>
 </template>
@@ -55,7 +64,6 @@ export default {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 1;
-  display: block;
 }
 .cta-section {
   grid-column-start: 1;
@@ -132,7 +140,6 @@ export default {
     grid-row-start: 1;
     grid-row-end: 1;
     align-items: flex-start;
-    display: none;
   }
   .cta-section {
     grid-column-start: 1;

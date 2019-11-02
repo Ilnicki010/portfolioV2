@@ -3,9 +3,7 @@
     <h1>Want to talk with me?</h1>
     <h2>
       The best way is to ping me via email
-      <a
-        href="mailto:dominik.ilnicki@gmail.com"
-      >dominik.ilnicki@gmail.com</a>
+      <a href="mailto:dominik.ilnicki@gmail.com">dominik.ilnicki@gmail.com</a>
     </h2>
   </div>
 </template>

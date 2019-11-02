@@ -19,6 +19,9 @@ export default {
         content: 'Portfolio website.'
       }
     ],
+    htmlAttrs: {
+      lang: 'en'
+    },
     link: [
       {
         rel: 'icon',

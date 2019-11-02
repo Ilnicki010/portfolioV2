@@ -2,7 +2,11 @@
   <div class="skillsWrapper">
     <div class="skillsWrapper__content">
       <h1>What can I do for you?</h1>
-      <h2>I'm focused on front end technologies, but backend stack and UI/UX are also close to my heart. It means that I develop complexive web applications.</h2>
+      <h2>
+        I'm focused on front end technologies, but backend stack and UI/UX are
+        also close to my heart. It means that I develop complexive web
+        applications.
+      </h2>
     </div>
     <section class="skillsWrapper__skills-section">
       <h3>My skills</h3>

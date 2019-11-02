@@ -54,6 +54,7 @@ export default {}
 }
 @media screen and (max-width: 720px) {
   .socialMenuWrapper {
+    display: none;
     ul {
       flex-direction: row;
     }

@@ -4,7 +4,12 @@
       <logo class="logo" />
     </nuxt-link>
     <div class="main-menu">
-      <input id="hamburgerToggle" type="checkbox" @change="turnOffScroll($event)" />
+      <label for="hamburgerToggle" style="display:none;">Hamburger Menu</label>
+      <input
+        id="hamburgerToggle"
+        type="checkbox"
+        @change="turnOffScroll($event)"
+      />
       <span></span>
       <span></span>
       <span></span>
@@ -23,7 +28,8 @@
             class="resume"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
             target="_blank"
-          >Resume</a>
+            >Resume</a
+          >
         </li>
       </ul>
     </div>
@@ -40,7 +46,6 @@ export default {
       document.body.style.position = 'relative'
     },
     turnOffScroll() {
-      console.log('here')
       if (document.querySelector('#hamburgerToggle').checked) {
         document.querySelector('body').style.position = 'fixed'
       } else {
