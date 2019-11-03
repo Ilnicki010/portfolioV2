@@ -1,19 +1,31 @@
 <template>
   <nav class="socialMenuWrapper">
-    <ul>
-      <li>
-        <a href="https://www.linkedin.com/in/dominik-ilnicki/" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
+    <ul class="list">
+      <li class="list__element">
+        <a
+          class="element__link"
+          href="https://www.linkedin.com/in/dominik-ilnicki/"
+          target="_blank"
+        >
+          <i class="element__icon fab fa-linkedin-in"></i>
         </a>
       </li>
-      <li>
-        <a href="https://twitter.com/DominikIlnicki" target="_blank">
-          <i class="fab fa-twitter"></i>
+      <li class="list__element">
+        <a
+          class="element__link"
+          href="https://twitter.com/DominikIlnicki"
+          target="_blank"
+        >
+          <i class="element__icon fab fa-twitter"></i>
         </a>
       </li>
-      <li>
-        <a href="https://github.com/Ilnicki010" target="_blank">
-          <i class="fab fa-github"></i>
+      <li class="list__element">
+        <a
+          class="element__link"
+          href="https://github.com/Ilnicki010"
+          target="_blank"
+        >
+          <i class="element__icon fab fa-github"></i>
         </a>
       </li>
     </ul>
@@ -31,16 +43,16 @@ export default {}
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  ul {
+  .list {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding: 0 10px;
-    li {
+    .list__element {
       flex: 1;
       margin-top: 25px;
-      a i {
+      .element__link .element__icon {
         padding: 7px;
         border-radius: 5px;
         transition: border-radius 0.2s ease-out, background-color 0.5s ease-out;
@@ -55,7 +67,7 @@ export default {}
 @media screen and (max-width: 720px) {
   .socialMenuWrapper {
     display: none;
-    ul {
+    .list {
       flex-direction: row;
     }
   }

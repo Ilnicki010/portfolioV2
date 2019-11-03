@@ -3,7 +3,6 @@
   <nuxt-link
     v-if="project"
     :to="`/projects?name=${project.nameID}`"
-    tag="article"
     class="projects-wrapper__project"
     :style="`background: ${project.mainColor}`"
   >

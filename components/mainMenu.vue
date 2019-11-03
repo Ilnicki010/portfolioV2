@@ -4,7 +4,11 @@
       <logo class="logo" />
     </nuxt-link>
     <div class="main-menu">
-      <input id="hamburgerToggle" type="checkbox" @change="turnOffScroll($event)" />
+      <input
+        id="hamburgerToggle"
+        type="checkbox"
+        @change="turnOffScroll($event)"
+      />
       <span></span>
       <span></span>
       <span></span>

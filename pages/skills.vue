@@ -1,8 +1,8 @@
 <template>
   <div class="skillsWrapper">
     <div class="skillsWrapper__content">
-      <h1>What can I do for you?</h1>
-      <h2>
+      <h1 class="content__title">What can I do for you?</h1>
+      <h2 class="content__subtitle">
         I'm focused on front end technologies, but backend stack and UI/UX are
         also close to my heart. It means that I develop complexive web
         applications.
@@ -12,15 +12,15 @@
       <h3>My skills</h3>
       <div class="skills-section__list-wrapper">
         <ul class="list-wrapper__list">
-          <li>JS</li>
-          <li>VUE</li>
-          <li>NUXT</li>
-          <li>ES6</li>
-          <li>HTML</li>
-          <li>SCSS</li>
-          <li>UI/UX</li>
-          <li>Node</li>
-          <li>Adobe XD</li>
+          <li class="list__element">JS</li>
+          <li class="list__element">VUE</li>
+          <li class="list__element">NUXT</li>
+          <li class="list__element">ES6</li>
+          <li class="list__element">HTML</li>
+          <li class="list__element">SCSS</li>
+          <li class="list__element">UI/UX</li>
+          <li class="list__element">Node</li>
+          <li class="list__element">Adobe XD</li>
         </ul>
       </div>
     </section>
@@ -41,12 +41,12 @@ export default {
   flex-direction: column;
   .skillsWrapper__content {
     max-width: 60%;
-    h1 {
+    .content__title {
       font-size: 1.2rem;
       font-weight: 500;
     }
 
-    h2 {
+    .content__subtitle {
       font-size: 2rem;
     }
   }
@@ -57,7 +57,7 @@ export default {
         display: inline-flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        li {
+        .list__element {
           padding: 5px 13px;
           text-align: center;
           border-radius: 100px;
@@ -72,10 +72,10 @@ export default {
 @media screen and (max-width: 720px) {
   .skillsWrapper .skillsWrapper__content {
     max-width: 100%;
-    h1 {
+    .content__title {
       font-size: 1rem;
     }
-    h2 {
+    .content__subtitle {
       font-size: 1.4rem;
     }
   }

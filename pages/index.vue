@@ -2,8 +2,10 @@
   <div class="mainWrapper">
     <header class="cta-section">
       <div class="cta-section__content">
-        <h1>Dominik Ilnicki, web developer based in Gdynia Poland</h1>
-        <h2>
+        <h1 class="content__title">
+          Dominik Ilnicki, web developer based in Gdynia Poland
+        </h1>
+        <h2 class="content__subtitle">
           Hi I’m working on web projects to make users experiences as best as it
           is possible
         </h2>
@@ -16,7 +18,7 @@
             target="_blank"
             class="button button--ghost button--github"
           >
-            <i class="fab fa-github"></i>
+            <i class="button__icon fab fa-github"></i>
             GitHub
           </a>
         </div>
@@ -81,12 +83,12 @@ export default {
     flex-direction: column;
     justify-content: center;
 
-    h1 {
+    .content__title {
       font-size: 1.2rem;
       font-weight: 500;
     }
 
-    h2 {
+    .content__subtitle {
       font-size: 2rem;
     }
 
@@ -146,20 +148,20 @@ export default {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
-    .cta-section__navbar {
-      ul {
-        flex-direction: column;
-        li {
-          margin: 0 5px;
-        }
-      }
-    }
+    // .cta-section__navbar {
+    //   ul {
+    //     flex-direction: column;
+    //     li {
+    //       margin: 0 5px;
+    //     }
+    //   }
+    // }
     .cta-section__content {
       min-width: 100%;
-      h1 {
+      .content__title {
         font-size: 1rem;
       }
-      h2 {
+      .content__subtitle {
         font-size: 1.4rem;
       }
       .cta-section__content__buttons {
@@ -177,7 +179,7 @@ export default {
   }
 }
 .button--github {
-  i {
+  .button__icon {
     margin-right: 10px;
   }
 }

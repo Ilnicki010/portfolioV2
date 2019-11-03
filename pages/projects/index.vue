@@ -1,7 +1,9 @@
 <template>
   <div class="projectWrapper">
     <div class="back-link">
-      <nuxt-link to="/"> <i class="fas fa-angle-left"></i>Back </nuxt-link>
+      <nuxt-link to="/" class="back-link__link">
+        <i class="back-link__icon fas fa-angle-left"></i>Back
+      </nuxt-link>
     </div>
     <div
       class="projectWrapper__image-wrapper"
@@ -23,7 +25,7 @@
       <a
         :href="ghLink"
         target="_blank"
-        class="button button--ghost button--github"
+        class="buttons__icon button button--ghost button--github"
       >
         <i class="fab fa-github"></i>
         Code
@@ -31,19 +33,20 @@
     </div>
     <div class="projectWrapper__content">
       <div class="content__field">
-        <span>Project name</span>
-        <h1>{{ name }}</h1>
+        <span class="field__label">Project name</span>
+        <h1 class="field__name">{{ name }}</h1>
       </div>
       <div class="content__field">
-        <span>Description</span>
-        <p>{{ description }}</p>
+        <span class="field__label">Description</span>
+        <p class="field__desc">{{ description }}</p>
       </div>
       <div class="content__field">
-        <span>Stack</span>
-        <ul>
+        <span class="field__label">Stack</span>
+        <ul class="field__stack-list">
           <li
             v-for="item in stack"
             :key="stack.indexOf(item)"
+            class="stack-list__element"
             :style="`background:${mainColor}`"
           >
             {{ item }}
@@ -89,10 +92,10 @@ export default {
     align-items: center;
     font-weight: 900;
     color: #000;
-    a {
+    .back-link__link {
       color: #000;
     }
-    i {
+    .back-link__icon {
       margin-right: 10px;
     }
   }
@@ -131,7 +134,7 @@ export default {
     .button:first-child {
       margin-right: 35px;
     }
-    .button i {
+    .button .buttons__icon {
       margin-right: 10px;
     }
   }
@@ -147,17 +150,17 @@ export default {
       * {
         margin: 0;
       }
-      span {
+      .field__label {
         opacity: 0.4;
         font-size: 0.8rem;
         padding-bottom: 10px;
       }
-      ul {
+      .field__stack-list {
         padding: 0;
         display: inline-flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        li {
+        .stack-list__element {
           padding: 5px 10px;
           text-align: center;
           border-radius: 100px;

@@ -1,9 +1,11 @@
 <template>
   <div class="contactWrapper">
-    <h1>Want to talk with me?</h1>
-    <h2>
+    <h1 class="contactWrapper__title">Want to talk with me?</h1>
+    <h2 class="contactWrapper__subtitle">
       The best way is to ping me via email
-      <a href="mailto:dominik.ilnicki@gmail.com">dominik.ilnicki@gmail.com</a>
+      <a class="contactWrapper__mail" href="mailto:dominik.ilnicki@gmail.com"
+        >dominik.ilnicki@gmail.com</a
+      >
     </h2>
   </div>
 </template>
@@ -21,18 +23,15 @@ export default {
   height: calc(100vh - 160px);
   flex-direction: column;
   max-width: 60%;
-  h1,
-  p {
+  .contactWrapper__title {
     margin: 0;
-  }
-  h1 {
     font-size: 1.2rem;
     font-weight: 500;
   }
 
-  h2 {
+  .contactWrapper__subtitle {
     font-size: 2rem;
-    a {
+    .contactWrapper__mail {
       text-decoration: underline;
     }
   }
@@ -40,10 +39,10 @@ export default {
 @media screen and (max-width: 720px) {
   .contactWrapper {
     max-width: 100%;
-    h1 {
+    .contactWrapper__title {
       font-size: 1rem;
     }
-    h2 {
+    .contactWrapper__subtitle {
       font-size: 1.4rem;
     }
   }
