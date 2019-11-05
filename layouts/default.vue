@@ -133,24 +133,23 @@ a {
   }
 }
 
-.default-enter {
-  transform: translateX(100vw);
+.default-enter,
+.default-leave-to {
+  opacity: 0;
+  transform: translateY(25px);
 }
 .default-enter-active {
-  transition: transform 0.2s ease-out;
+  transition: transform 0.15s ease-out, opacity 0.2s ease-out;
 }
+.default-leave,
 .default-enter-to {
-  transform: translateX(0);
-}
-.default-leave {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 .default-leave-active {
-  transition: transform 0.2s ease-out;
+  transition: transform 0.15s ease-in, opacity 0.2s ease-in;
 }
-.default-leave-to {
-  transform: translateX(-100vw);
-}
+
 @media screen and (max-width: 720px) {
   .layoutWrapper {
     padding: 30px 20px;

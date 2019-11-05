@@ -16,16 +16,16 @@
     </button>
     <div class="navigation" :class="{ 'navigation--active': openMenu }">
       <ul class="navigation__list">
-        <li @click="menuShowAndClose" class="navigation__item">
+        <li class="navigation__item" @click="menuShowAndClose">
           <nuxt-link class="item__link" to="/">My projects</nuxt-link>
         </li>
-        <li @click="menuShowAndClose" class="navigation__item">
+        <li class="navigation__item" @click="menuShowAndClose">
           <nuxt-link class="item__link" to="/contact">Contact me</nuxt-link>
         </li>
-        <li @click="menuShowAndClose" class="navigation__item">
+        <li class="navigation__item" @click="menuShowAndClose">
           <nuxt-link class="item__link" to="/skills">Skills</nuxt-link>
         </li>
-        <li @click="menuShowAndClose" class="navigation__item">
+        <li class="navigation__item" @click="menuShowAndClose">
           <a
             class="item__link"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
