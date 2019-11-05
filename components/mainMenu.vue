@@ -1,30 +1,33 @@
 <template>
   <nav class="mainMenuWrapper">
-    <nuxt-link to="/">
-      <logo class="logo" />
+    <nuxt-link to="/" class="logo">
+      <logo class="logo__image" />
     </nuxt-link>
-    <div class="main-menu">
-      <input
-        id="hamburgerToggle"
-        type="checkbox"
-        @change="turnOffScroll($event)"
-      />
-      <span></span>
-      <span></span>
-      <span></span>
-      <ul class="main-menu__content">
-        <li @click="closeMenu">
-          <nuxt-link to="/">My projects</nuxt-link>
+    <button
+      class="hamburger"
+      aria-expanded="false"
+      :class="{ 'hamburger--active': openMenu }"
+      @click="menuShowAndClose"
+    >
+      <span class="sr-only">Open/Close menu</span>
+      <span class="hamburger__box">
+        <span class="hamburger__inner"></span>
+      </span>
+    </button>
+    <div class="navigation" :class="{ 'navigation--active': openMenu }">
+      <ul class="navigation__list">
+        <li @click="menuShowAndClose" class="navigation__item">
+          <nuxt-link class="item__link" to="/">My projects</nuxt-link>
         </li>
-        <li @click="closeMenu">
-          <nuxt-link to="/contact">Contact me</nuxt-link>
+        <li @click="menuShowAndClose" class="navigation__item">
+          <nuxt-link class="item__link" to="/contact">Contact me</nuxt-link>
         </li>
-        <li @click="closeMenu">
-          <nuxt-link to="/skills">Skills</nuxt-link>
+        <li @click="menuShowAndClose" class="navigation__item">
+          <nuxt-link class="item__link" to="/skills">Skills</nuxt-link>
         </li>
-        <li @click="closeMenu">
+        <li @click="menuShowAndClose" class="navigation__item">
           <a
-            class="resume"
+            class="item__link"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
             target="_blank"
           >
@@ -41,17 +44,14 @@
 import Logo from '@/components/Logo'
 export default {
   components: { Logo },
+  data() {
+    return {
+      openMenu: false
+    }
+  },
   methods: {
-    closeMenu() {
-      document.querySelector('#hamburgerToggle').checked = false
-      document.body.style.position = 'relative'
-    },
-    turnOffScroll() {
-      if (document.querySelector('#hamburgerToggle').checked) {
-        document.querySelector('body').style.position = 'fixed'
-      } else {
-        document.querySelector('body').style.position = 'relative'
-      }
+    menuShowAndClose() {
+      this.openMenu ? (this.openMenu = false) : (this.openMenu = true)
     }
   }
 }
@@ -60,127 +60,144 @@ export default {
 <style lang="scss" scoped>
 .mainMenuWrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+.logo {
   flex: 1;
-  position: relative;
-  .logo {
-    flex: 1;
-  }
+}
+.hamburger {
+  display: none;
+}
+.navigation {
+  flex: 3;
+}
 
-  .main-menu {
-    flex: 4;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    input {
-      opacity: 0;
-    }
-    .main-menu__content {
-      display: flex;
-      li {
-        margin: 0 40px;
-        a {
-          font-weight: 600;
-          padding: 10px 0;
-          border-bottom: 2px solid transparent;
-          transition: border-bottom 0.3s ease-out;
-          &:hover {
-            transform: translateY(0);
-            border-bottom-color: #000;
-          }
-        }
-      }
-    }
+.navigation__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation__item {
+  .item__link {
+    text-decoration: none;
+    color: #000;
   }
 }
-@media screen and (max-width: 720px) {
-  .main-menu {
-    padding: 20px;
-    position: relative;
-    .main-menu__content {
-      position: absolute;
-      transform-origin: 0% 0%;
-      transform: translate(100vh, 0);
-      width: calc(100% + 160px);
-      height: 90vh;
-      margin: auto;
-      top: -40px;
-      left: -130px;
-      z-index: 9999;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #000000;
-      background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23baf2bb' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      font-size: 2rem;
-      transition: transform 0.2s ease-out;
-      li {
-        padding: 20px;
-        width: 100%;
-        font-size: 1.2rem;
-        cursor: pointer;
-        a {
-          color: #fff;
-        }
-        .resume {
-          color: #000;
-        }
-        &:last-child {
-          margin: auto;
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          background: #baf2bb;
-          text-align: center;
-        }
-      }
-    }
 
-    input {
-      height: 48px;
-      width: 48px;
-      display: block;
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      opacity: 0;
-      z-index: 99999999;
-      transform-origin: 50% 50%;
-      &:checked ~ span {
-        background: #fff;
-        z-index: 9999999;
-      }
-      &:checked ~ span:nth-child(2) {
-        transform: translate(0, 0) rotate(45deg);
-      }
-      &:checked ~ span:nth-child(3) {
-        opacity: 0;
-      }
-      &:checked ~ span:nth-child(4) {
-        transform: translate(0, 0) rotate(-45deg);
-      }
-      &:checked ~ .main-menu__content {
-        transform: translate(0);
-      }
-    }
-    span {
-      display: block;
-      position: absolute;
-      width: 48px;
-      height: 3px;
-      background: #222;
-      border-radius: 20px;
-      transition: transform 0.2s ease-in-out, opacity 0.1s ease-in-out;
-      transform-origin: center;
-      &:nth-child(2) {
-        transform: translateY(12px);
-      }
-      &:nth-child(4) {
-        transform: translateY(-12px);
-      }
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+@media screen and (max-width: 720px) {
+  .hamburger {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    z-index: 999;
+  }
+
+  .hamburger,
+  .navigation {
+    transition: transform 0.2s 0.1s ease-in-out, visibility 0.2s 0.4s;
+  }
+  .hamburger__box {
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+  @mixin hamburger-line {
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #000;
+    position: absolute;
+  }
+
+  .hamburger__inner {
+    @include hamburger-line;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.1s 0.2s ease-in-out;
+  }
+
+  .hamburger__inner::before,
+  .hamburger__inner::after {
+    @include hamburger-line;
+
+    content: '';
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+  }
+
+  .hamburger__inner::before {
+    top: -10px;
+  }
+
+  .hamburger__inner::after {
+    top: 10px;
+  }
+
+  .hamburger--active .hamburger__inner {
+    background-color: transparent;
+  }
+
+  .hamburger--active .hamburger__inner:before {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger--active .hamburger__inner:after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  .navigation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    right: 0;
+    visibility: hidden;
+    background: #fff;
+    z-index: 99;
+    transform: translateY(100vh);
+  }
+  .navigation--active {
+    transition: transform 0.3s 0.1s ease-in-out, visibility 0s 0s;
+    transform: translateY(0px);
+    visibility: visible;
+  }
+  .navigation__list {
+    padding: 0;
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .navigation__item {
+    .item__link {
+      padding: 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.6rem;
     }
   }
 }
