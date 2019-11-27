@@ -2,10 +2,7 @@
   <div class="layoutWrapper">
     <main-menu class="menu" />
     <nuxt class="content" />
-    <footer class="main-footer">
-      © Dominik Ilnicki 2019
-      <span>/ template free</span>
-    </footer>
+    <footer class="main-footer">© Dominik Ilnicki 2019</footer>
   </div>
 </template>
 <script>

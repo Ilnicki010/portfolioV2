@@ -2,17 +2,13 @@
   <div class="mainWrapper">
     <header class="cta-section">
       <div class="cta-section__content">
-        <h1 class="content__title">
-          Dominik Ilnicki, web developer based in Gdynia Poland
-        </h1>
+        <h1 class="content__title">Dominik Ilnicki, web developer based in Gdynia Poland</h1>
         <h2 class="content__subtitle">
           Hi I’m working on web projects to make users experiences as best as it
           is possible
         </h2>
         <div class="cta-section__content__buttons">
-          <nuxt-link to="/contact" class="button button--primary"
-            >Contact me</nuxt-link
-          >
+          <nuxt-link to="/contact" class="button button--primary">Contact me</nuxt-link>
           <a
             href="https://github.com/Ilnicki010"
             target="_blank"
@@ -23,12 +19,10 @@
           </a>
         </div>
       </div>
-      <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
-      <img src="@/assets/patter.svg" class="pattern" alt="decoral pattern" />
     </header>
-    <social-menu class="social-menu" />
+    <the-social-menu class="social-menu" />
     <main class="projects-wrapper">
-      <project-block
+      <single-project-element
         v-for="project in myProjects"
         :key="project.nameID"
         :project="project"
@@ -39,11 +33,11 @@
 
 <script>
 import myProjects from '@/static/projects.json'
-import projectBlock from '@/components/projectBlock'
-import socialMenu from '@/components/socialMenu'
+import SingleProjectElement from '@/components/SingleProjectElement'
+import TheSocialMenu from '@/components/TheSocialMenu'
 export default {
   transition: 'default',
-  components: { projectBlock, socialMenu },
+  components: { SingleProjectElement, TheSocialMenu },
   data() {
     return {
       myProjects
@@ -100,24 +94,7 @@ export default {
       }
     }
   }
-
-  .pattern {
-    display: none;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // z-index: -9999;
-    // width: 200px;
-    // &:last-child {
-    //   top: 20px;
-    //   right: 40px;
-    //   z-index: -9999;
-    //   width: 230px;
-    //   transform: rotate(-24deg);
-    // }
-  }
 }
-
 .projects-wrapper {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -148,14 +125,6 @@ export default {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
-    // .cta-section__navbar {
-    //   ul {
-    //     flex-direction: column;
-    //     li {
-    //       margin: 0 5px;
-    //     }
-    //   }
-    // }
     .cta-section__content {
       min-width: 100%;
       .content__title {

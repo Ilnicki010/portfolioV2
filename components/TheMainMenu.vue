@@ -5,9 +5,9 @@
     </nuxt-link>
     <button
       class="hamburger"
-      aria-expanded="false"
+      :aria-expanded="String(openMenu)"
       :class="{ 'hamburger--active': openMenu }"
-      @click="menuShowAndClose"
+      @click="toggleMenuHandler"
     >
       <span class="sr-only">Open/Close menu</span>
       <span class="hamburger__box">
@@ -16,16 +16,16 @@
     </button>
     <div class="navigation" :class="{ 'navigation--active': openMenu }">
       <ul class="navigation__list">
-        <li class="navigation__item" @click="menuShowAndClose">
+        <li class="navigation__item" @click="toggleMenuHandler">
           <nuxt-link class="item__link" to="/">My projects</nuxt-link>
         </li>
-        <li class="navigation__item" @click="menuShowAndClose">
+        <li class="navigation__item" @click="toggleMenuHandler">
           <nuxt-link class="item__link" to="/contact">Contact me</nuxt-link>
         </li>
-        <li class="navigation__item" @click="menuShowAndClose">
+        <li class="navigation__item" @click="toggleMenuHandler">
           <nuxt-link class="item__link" to="/skills">Skills</nuxt-link>
         </li>
-        <li class="navigation__item" @click="menuShowAndClose">
+        <li class="navigation__item" @click="toggleMenuHandler">
           <a
             class="item__link"
             href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
@@ -50,7 +50,7 @@ export default {
     }
   },
   methods: {
-    menuShowAndClose() {
+    toggleMenuHandler() {
       this.openMenu ? (this.openMenu = false) : (this.openMenu = true)
     }
   }
@@ -173,6 +173,7 @@ export default {
     width: 100vw;
     right: 0;
     visibility: hidden;
+    display: none;
     background: #fff;
     z-index: 99;
     transform: translateY(100vh);
@@ -181,6 +182,7 @@ export default {
     transition: transform 0.3s 0.1s ease-in-out, visibility 0s 0s;
     transform: translateY(0px);
     visibility: visible;
+    display: flex;
   }
   .navigation__list {
     padding: 0;
