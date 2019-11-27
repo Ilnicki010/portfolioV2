@@ -5,28 +5,19 @@
         <i class="back-link__icon fas fa-angle-left"></i>Back
       </nuxt-link>
     </div>
-    <div
-      class="projectWrapper__image-wrapper"
-      :style="`background:${mainColor}`"
-    >
+    <div class="projectWrapper__image-wrapper" :style="`background:${mainColor}`">
       <div class="image-wrapper__parent">
         <div
           class="image-wrapper__parent__image"
           :style="{
-            backgroundImage: 'url(' + getImgUrl(nameID) + ')'
+            backgroundImage: `url(${getImgUrl(nameID)}`
           }"
         ></div>
       </div>
     </div>
     <div class="projectWrapper__buttons">
-      <a :href="liveDemoLink" target="_blank" class="button button--primary"
-        >Visit site</a
-      >
-      <a
-        :href="ghLink"
-        target="_blank"
-        class="buttons__icon button button--ghost button--github"
-      >
+      <a :href="liveDemoLink" target="_blank" class="button button--primary">Visit site</a>
+      <a :href="ghLink" target="_blank" class="buttons__icon button button--ghost button--github">
         <i class="fab fa-github"></i>
         Code
       </a>
@@ -47,10 +38,8 @@
             v-for="item in stack"
             :key="stack.indexOf(item)"
             class="stack-list__element"
-            :style="`background:${mainColor}`"
-          >
-            {{ item }}
-          </li>
+            :style="borderLeft"
+          >{{ item }}</li>
         </ul>
       </div>
     </div>
@@ -73,7 +62,12 @@ export default {
   methods: {
     getImgUrl(projectName) {
       const images = require.context('@/assets/projects/', false, /\.png$/)
-      return images('./' + projectName + '.png')
+      return images(`./${projectName}.png`)
+    }
+  },
+  computed: {
+    borderLeft() {
+      return `border-left:1.4px solid ${this.mainColor}`
     }
   }
 }
@@ -163,7 +157,6 @@ export default {
         .stack-list__element {
           padding: 5px 10px;
           text-align: center;
-          border-radius: 100px;
           font-size: 0.9rem;
           margin: 5px 10px;
         }
