@@ -1,14 +1,14 @@
 <template>
   <div class="layoutWrapper">
-    <main-menu class="menu" />
+    <the-main-menu class="menu" />
     <nuxt class="content" />
     <footer class="main-footer">© Dominik Ilnicki 2019</footer>
   </div>
 </template>
 <script>
-import mainMenu from '@/components/mainMenu'
+import TheMainMenu from '@/components/TheMainMenu'
 export default {
-  components: { mainMenu }
+  components: { TheMainMenu }
 }
 </script>
 <style lang="scss">

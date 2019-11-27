@@ -1,7 +1,7 @@
 <template>
   <nav class="mainMenuWrapper">
     <nuxt-link to="/" class="logo">
-      <logo class="logo__image" />
+      <the-logo-component class="logo__image" />
     </nuxt-link>
     <button
       class="hamburger"
@@ -41,9 +41,9 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo'
+import TheLogoComponent from '@/components/TheLogoComponent'
 export default {
-  components: { Logo },
+  components: { TheLogoComponent },
   data() {
     return {
       openMenu: false
