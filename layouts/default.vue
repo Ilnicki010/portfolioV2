@@ -44,6 +44,17 @@ a {
   text-decoration: none;
   color: #000;
 }
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
 .layoutWrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -108,7 +119,9 @@ a {
     }
   }
 }
-
+.button__icon {
+  margin-right: 10px;
+}
 .button--primary {
   color: #fff;
   background: #000;
