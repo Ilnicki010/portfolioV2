@@ -5,7 +5,10 @@
         <i class="back-link__icon fas fa-angle-left"></i>Back
       </nuxt-link>
     </div>
-    <div class="projectWrapper__image-wrapper" :style="`background:${mainColor}`">
+    <div
+      class="projectWrapper__image-wrapper"
+      :style="`background:${mainColor}`"
+    >
       <div class="image-wrapper__parent">
         <div
           class="image-wrapper__parent__image"
@@ -16,8 +19,14 @@
       </div>
     </div>
     <div class="projectWrapper__buttons">
-      <a :href="liveDemoLink" target="_blank" class="button button--primary">Visit site</a>
-      <a :href="ghLink" target="_blank" class="buttons__icon button button--ghost button--github">
+      <a :href="liveDemoLink" target="_blank" class="button button--primary"
+        >Visit site</a
+      >
+      <a
+        :href="ghLink"
+        target="_blank"
+        class="buttons__icon button button--ghost button--github"
+      >
         <i class="fab fa-github"></i>
         Code
       </a>
@@ -39,7 +48,9 @@
             :key="stack.indexOf(item)"
             class="stack-list__element"
             :style="borderLeft"
-          >{{ item }}</li>
+          >
+            {{ item }}
+          </li>
         </ul>
       </div>
     </div>
@@ -49,6 +60,11 @@
 import myProjects from '@/static/projects.json'
 export default {
   transition: 'default',
+  computed: {
+    borderLeft() {
+      return `border-left:1.4px solid ${this.mainColor}`
+    }
+  },
   asyncData({ params, env, error, query }) {
     const project = myProjects.find(
       (project) => String(project.nameID) === query.name
@@ -63,11 +79,6 @@ export default {
     getImgUrl(projectName) {
       const images = require.context('@/assets/projects/', false, /\.png$/)
       return images(`./${projectName}.png`)
-    }
-  },
-  computed: {
-    borderLeft() {
-      return `border-left:1.4px solid ${this.mainColor}`
     }
   }
 }
