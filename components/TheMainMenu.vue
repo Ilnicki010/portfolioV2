@@ -115,6 +115,9 @@ export default {
   width: 1px;
 }
 @media screen and (max-width: 720px) {
+  .logo .logo__image {
+    width: 30%;
+  }
   .hamburger {
     padding: 10px;
     display: inline-block;
@@ -181,7 +184,7 @@ export default {
     transform: translateY(-10px) rotate(-45deg);
   }
   .navigation {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -200,11 +203,16 @@ export default {
     transform: translateY(0px);
     visibility: visible;
     display: flex;
+    justify-content: center;
   }
   .navigation__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
     padding: 0;
     display: flex;
-    height: 70%;
+    height: 70vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -215,8 +223,8 @@ export default {
       padding: 20px;
       text-decoration: none;
       color: #000;
-      font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.2em;
+      font-weight: 900;
     }
   }
 }
