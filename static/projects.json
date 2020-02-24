@@ -11,6 +11,17 @@
   },
   {
     "id": 2,
+    "nameID": "better-librus",
+    "name": "Better Librus",
+    "type": "Web application",
+    "description": "This project was created because I was struggled using the official Librus app and I decided to make my own version of it. Data are fetched from Librus using their REST API and used on a front-end. Right now it provides grades information and latest announcements. You can try it out using login: 13335 and password: librus11 ",
+    "stack": ["VUE JS", "VueX", "Adobe XD"],
+    "mainColor": "#FFE9A0",
+    "liveDemoLink": "https://quirky-meninsky-8f7c44.netlify.com/",
+    "ghLink": "https://github.com/Ilnicki010/better-librus"
+  },
+  {
+    "id": 3,
     "nameID": "quiz-fighters",
     "name": "Quiz Fighters",
     "type": "Web application",
