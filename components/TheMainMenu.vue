@@ -52,9 +52,6 @@ export default {
   methods: {
     toggleMenuHandler() {
       this.openMenu = !this.openMenu
-      this.openMenu
-        ? (document.body.style.overflow = 'hidden')
-        : (document.body.style.overflow = 'scroll')
     }
   }
 }
