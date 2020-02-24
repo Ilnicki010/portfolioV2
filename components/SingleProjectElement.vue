@@ -50,7 +50,7 @@ export default {
   max-width: 100%;
   transition: transform 0.2s ease-in-out;
   .project__header {
-    padding: 20px 30px;
+    padding: 4% 5%;
     flex: 1;
     .project__label {
       opacity: 0.6;

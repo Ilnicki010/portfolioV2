@@ -2,7 +2,7 @@
   <div class="layoutWrapper">
     <the-main-menu class="menu" />
     <nuxt class="content" />
-    <footer class="main-footer">© Dominik Ilnicki 2019</footer>
+    <footer class="main-footer">© Dominik Ilnicki 2020</footer>
   </div>
 </template>
 <script>
@@ -35,7 +35,6 @@ body {
   font-family: 'Quicksand', sans-serif;
   overflow-x: hidden;
 }
-
 ul {
   list-style: none;
 }
@@ -60,7 +59,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   overflow-x: hidden;
-  padding: 20px 70px;
+  padding: 2vh 7vw;
   .menu {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -90,21 +89,18 @@ a {
 }
 .button {
   border-radius: 4px;
-  width: 160px;
-  height: 48px;
   text-align: center;
   position: relative;
-  padding: 10px 20px;
+  padding: 14px 20px;
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-
   &::after {
     content: '';
     position: absolute;
-    top: -5px;
-    left: 6px;
+    top: -15%;
+    left: 6%;
     width: 100%;
     height: 100%;
     z-index: -9999;
@@ -114,7 +110,7 @@ a {
 
   &:hover {
     &::after {
-      transform: translate(-6px, 5px);
+      transform: translate(-6%, 15%);
       border-color: transparent;
     }
   }
@@ -134,7 +130,7 @@ a {
 .button--ghost {
   color: #000;
   background: transparent;
-  border: 2px solid #000;
+  border: 0.11vw solid #000;
 
   &::after {
     content: '';
@@ -165,7 +161,6 @@ a {
     padding: 30px 20px;
   }
   .button {
-    width: auto;
   }
   .main-footer {
     justify-content: center;

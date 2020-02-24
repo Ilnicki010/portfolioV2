@@ -76,8 +76,8 @@ export default {
 .projectWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 48px auto auto;
-  grid-gap: 40px;
+  grid-template-rows: 12vh 50vh auto;
+  grid-gap: 48px;
   width: 100%;
   .back-link {
     grid-column-start: 1;
@@ -96,8 +96,8 @@ export default {
   .projectWrapper__image-wrapper {
     border-radius: 10px;
     position: relative;
-    height: 50vh;
-    padding: 20px;
+    padding: 0 3%;
+    height: 90%;
     .image-wrapper__parent {
       position: relative;
       display: flex;
@@ -105,12 +105,12 @@ export default {
       height: 100%;
       .image-wrapper__parent__image {
         position: absolute;
-        margin: 20px;
-        bottom: 0;
         left: 0;
+        top: 0;
+        bottom: 0;
         right: 0;
-        padding-bottom: 56.25%;
-        margin: 0 auto;
+        height: 80%;
+        margin: auto;
         border-radius: 10px;
         background-position: center;
         background-size: cover;
@@ -126,7 +126,7 @@ export default {
     display: flex;
     justify-content: center;
     .button:first-child {
-      margin-right: 35px;
+      margin-right: 10%;
     }
     .button .buttons__icon {
       margin-right: 10px;
@@ -135,7 +135,8 @@ export default {
   .projectWrapper__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-left: 1.6vw;
     .content__field {
       display: flex;
       flex-direction: column;
@@ -144,9 +145,12 @@ export default {
       * {
         margin: 0;
       }
+      .field__name {
+        font-size: 1.7em;
+      }
       .field__label {
         opacity: 0.4;
-        font-size: 0.8rem;
+
         padding-bottom: 10px;
       }
       .field__stack-list {
@@ -157,8 +161,8 @@ export default {
         .stack-list__element {
           padding: 5px 10px;
           text-align: center;
-          font-size: 0.9rem;
-          margin: 5px 10px;
+
+          margin: 1% 2%;
         }
       }
     }

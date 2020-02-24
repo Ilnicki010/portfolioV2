@@ -1,7 +1,7 @@
 <template>
   <nav class="mainMenuWrapper">
     <nuxt-link to="/" class="logo">
-      <the-logo-component class="logo__image" />
+      <img src="@/assets/logo.svg" class="logo__image" />
     </nuxt-link>
     <button
       class="hamburger"
@@ -61,15 +61,21 @@ export default {
 .mainMenuWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .logo {
   flex: 1;
+  .logo__image {
+    width: 7vw;
+  }
 }
 .hamburger {
   display: none;
 }
 .navigation {
   flex: 3;
+  height: 10vh;
+  margin: 0;
 }
 
 .navigation__list {
@@ -77,12 +83,23 @@ export default {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  margin: 0;
+  height: 100%;
 }
 
 .navigation__item {
+  height: 100%;
+  flex: 1;
   .item__link {
-    text-decoration: none;
-    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    &:hover {
+      background: rgb(241, 241, 241);
+      border-radius: 2px;
+    }
   }
 }
 
@@ -98,6 +115,9 @@ export default {
   width: 1px;
 }
 @media screen and (max-width: 720px) {
+  .logo .logo__image {
+    width: 30%;
+  }
   .hamburger {
     padding: 10px;
     display: inline-block;
@@ -183,6 +203,7 @@ export default {
     transform: translateY(0px);
     visibility: visible;
     display: flex;
+    justify-content: center;
   }
   .navigation__list {
     padding: 0;
@@ -199,7 +220,6 @@ export default {
       text-decoration: none;
       color: #000;
       font-weight: 600;
-      font-size: 1.6rem;
     }
   }
 }
