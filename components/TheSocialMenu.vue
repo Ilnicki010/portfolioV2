@@ -43,10 +43,10 @@ export default {}
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 0 10px;
+    padding: 0 7%;
     .list__element {
       flex: 1;
-      margin-top: 25px;
+      margin-top: 7%;
       .element__link .element__icon {
         padding: 7px;
         border-radius: 5px;

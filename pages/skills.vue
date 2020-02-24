@@ -12,10 +12,7 @@
       <div class="skills-section__list-wrapper">
         <ul class="list-wrapper__list">
           <li class="list__element">
-            <img
-              src="@/assets/stack-logos/javascript.svg"
-              class="list__stack-logo"
-            />
+            <img src="@/assets/stack-logos/javascript.svg" class="list__stack-logo" />
           </li>
           <li class="list__element">
             <img src="@/assets/stack-logos/vue.svg" class="list__stack-logo" />
@@ -27,26 +24,17 @@
             <img src="@/assets/stack-logos/es6.svg" class="list__stack-logo" />
           </li>
           <li class="list__element">
-            <img
-              src="@/assets/stack-logos/html-5.svg"
-              class="list__stack-logo"
-            />
+            <img src="@/assets/stack-logos/html-5.svg" class="list__stack-logo" />
           </li>
           <li class="list__element">
             <img src="@/assets/stack-logos/sass.svg" class="list__stack-logo" />
           </li>
           <li class="list__element">UI/UX</li>
           <li class="list__element">
-            <img
-              src="@/assets/stack-logos/nodejs.svg"
-              class="list__stack-logo"
-            />
+            <img src="@/assets/stack-logos/nodejs.svg" class="list__stack-logo" />
           </li>
           <li class="list__element">
-            <img
-              src="@/assets/stack-logos/adobe-xd.svg"
-              class="list__stack-logo"
-            />
+            <img src="@/assets/stack-logos/adobe-xd.svg" class="list__stack-logo" />
           </li>
         </ul>
       </div>
@@ -69,12 +57,10 @@ export default {
   .skillsWrapper__content {
     max-width: 60%;
     .content__title {
-      font-size: 1.2rem;
       font-weight: 500;
     }
 
     .content__subtitle {
-      font-size: 2rem;
     }
   }
   .skillsWrapper__skills-section {
@@ -85,7 +71,7 @@ export default {
         justify-content: flex-start;
         flex-wrap: wrap;
         .list__element {
-          padding: 5px 13px;
+          padding: 5px 1vw;
           margin: 5px 10px;
           animation: slide-down-fade 0.2s both ease-in-out;
           @for $i from 1 through 9 {
@@ -94,7 +80,7 @@ export default {
             }
           }
           .list__stack-logo {
-            max-height: 35px;
+            max-height: 5vh;
           }
         }
       }
@@ -105,10 +91,8 @@ export default {
   .skillsWrapper .skillsWrapper__content {
     max-width: 100%;
     .content__title {
-      font-size: 1rem;
     }
     .content__subtitle {
-      font-size: 1.4rem;
     }
   }
 }

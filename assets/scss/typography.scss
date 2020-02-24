@@ -1,0 +1,13 @@
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+h1 {
+  font-size: 1.1em;
+}
+
+span {
+  font-size: .9em;
+}

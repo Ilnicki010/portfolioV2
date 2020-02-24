@@ -78,16 +78,14 @@ export default {
     justify-content: center;
 
     .content__title {
-      font-size: 1.2rem;
       font-weight: 500;
     }
 
     .content__subtitle {
-      font-size: 2rem;
     }
 
     .cta-section__content__buttons {
-      margin-top: 50px;
+      margin-top: 7vh;
       display: flex;
       .button:first-child {
         margin-right: 25px;
@@ -103,7 +101,7 @@ export default {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 2vw;
   padding: 0 10px;
   margin-bottom: 30px;
 }
@@ -128,10 +126,8 @@ export default {
     .cta-section__content {
       min-width: 100%;
       .content__title {
-        font-size: 1rem;
       }
       .content__subtitle {
-        font-size: 1.4rem;
       }
       .cta-section__content__buttons {
         justify-content: flex-start;
