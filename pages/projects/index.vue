@@ -5,7 +5,10 @@
         <i class="back-link__icon fas fa-angle-left"></i>Back
       </nuxt-link>
     </div>
-    <div class="projectWrapper__image-wrapper" :style="`background:${mainColor}`">
+    <div
+      class="projectWrapper__image-wrapper"
+      :style="`background:${mainColor}`"
+    >
       <div class="image-wrapper__parent">
         <div
           class="image-wrapper__parent__image"
@@ -16,8 +19,14 @@
       </div>
     </div>
     <div class="projectWrapper__buttons">
-      <a :href="liveDemoLink" target="_blank" class="button button--primary">Visit site</a>
-      <a :href="ghLink" target="_blank" class="buttons__icon button button--ghost button--github">
+      <a :href="liveDemoLink" target="_blank" class="button button--primary"
+        >Visit site</a
+      >
+      <a
+        :href="ghLink"
+        target="_blank"
+        class="buttons__icon button button--ghost button--github"
+      >
         <span class="button__icon fab fa-github" aria-hidden="true"></span>
         Code
       </a>
@@ -39,7 +48,9 @@
             :key="stack.indexOf(item)"
             class="stack-list__element"
             :style="borderLeft"
-          >{{ item }}</li>
+          >
+            {{ item }}
+          </li>
         </ul>
       </div>
     </div>

@@ -3,10 +3,9 @@
     <h1 class="contactWrapper__title">Want to talk with me?</h1>
     <h2 class="contactWrapper__subtitle">
       The best way is to ping me via email
-      <a
-        class="contactWrapper__mail"
-        href="mailto:dominik.ilnicki@gmail.com"
-      >dominik.ilnicki@gmail.com</a>
+      <a class="contactWrapper__mail" href="mailto:dominik.ilnicki@gmail.com"
+        >dominik.ilnicki@gmail.com</a
+      >
     </h2>
   </div>
 </template>

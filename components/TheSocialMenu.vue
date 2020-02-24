@@ -7,18 +7,29 @@
           href="https://www.linkedin.com/in/dominik-ilnicki/"
           target="_blank"
         >
-          <span class="element__icon fab fa-linkedin-in" aria-hidden="true"></span>
+          <span
+            class="element__icon fab fa-linkedin-in"
+            aria-hidden="true"
+          ></span>
           <span class="visuallyhidden">Linkedin link</span>
         </a>
       </li>
       <li class="list__element">
-        <a class="element__link" href="https://twitter.com/DominikIlnicki" target="_blank">
+        <a
+          class="element__link"
+          href="https://twitter.com/DominikIlnicki"
+          target="_blank"
+        >
           <span class="element__icon fab fa-twitter" aria-hidden="true"></span>
           <span class="visuallyhidden">Twitter link</span>
         </a>
       </li>
       <li class="list__element">
-        <a class="element__link" href="https://github.com/Ilnicki010" target="_blank">
+        <a
+          class="element__link"
+          href="https://github.com/Ilnicki010"
+          target="_blank"
+        >
           <span class="element__icon fab fa-github" aria-hidden="true"></span>
           <span class="visuallyhidden">GitHub link</span>
         </a>

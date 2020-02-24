@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     toggleMenuHandler() {
-      this.openMenu = !this.openMenu
+      this.openMenu ? (this.openMenu = false) : (this.openMenu = true)
     }
   }
 }

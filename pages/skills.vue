@@ -12,7 +12,10 @@
       <div class="skills-section__list-wrapper">
         <ul class="list-wrapper__list">
           <li class="list__element">
-            <img src="@/assets/stack-logos/javascript.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/javascript.svg"
+              class="list__stack-logo"
+            />
           </li>
           <li class="list__element">
             <img src="@/assets/stack-logos/vue.svg" class="list__stack-logo" />
@@ -24,17 +27,26 @@
             <img src="@/assets/stack-logos/es6.svg" class="list__stack-logo" />
           </li>
           <li class="list__element">
-            <img src="@/assets/stack-logos/html-5.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/html-5.svg"
+              class="list__stack-logo"
+            />
           </li>
           <li class="list__element">
             <img src="@/assets/stack-logos/sass.svg" class="list__stack-logo" />
           </li>
           <li class="list__element">UI/UX</li>
           <li class="list__element">
-            <img src="@/assets/stack-logos/nodejs.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/nodejs.svg"
+              class="list__stack-logo"
+            />
           </li>
           <li class="list__element">
-            <img src="@/assets/stack-logos/adobe-xd.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/adobe-xd.svg"
+              class="list__stack-logo"
+            />
           </li>
         </ul>
       </div>
