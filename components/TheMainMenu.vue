@@ -184,7 +184,7 @@ export default {
     transform: translateY(-10px) rotate(-45deg);
   }
   .navigation {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -206,13 +206,9 @@ export default {
     justify-content: center;
   }
   .navigation__list {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
     padding: 0;
     display: flex;
-    height: 70vh;
+    max-height: 70vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
