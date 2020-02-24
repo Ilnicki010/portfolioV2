@@ -51,7 +51,10 @@ export default {
   },
   methods: {
     toggleMenuHandler() {
-      this.openMenu ? (this.openMenu = false) : (this.openMenu = true)
+      this.openMenu = !this.openMenu
+      this.openMenu
+        ? (document.body.style.overflowY = 'hidden')
+        : (document.body.style.overflowY = 'scroll')
     }
   }
 }
@@ -128,10 +131,6 @@ export default {
     z-index: 999;
   }
 
-  .hamburger,
-  .navigation {
-    transition: transform 0.2s 0.1s ease-in-out, visibility 0.2s 0.4s;
-  }
   .hamburger__box {
     width: 35px;
     height: 24px;
@@ -189,27 +188,27 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     bottom: 0;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     right: 0;
     visibility: hidden;
     background: #fff;
     z-index: 99;
-
+    transition: transform 0.5s 0.2s ease-in, visibility 0s 0.5s;
     transform: translateY(100vh);
   }
   .navigation--active {
     transform: translateY(0px);
     visibility: visible;
-
-    transition: transform 0.3s 0.1s ease-in-out, visibility 0s 0s;
+    transition: transform 0.5s 0.2s ease-out, visibility 0s 0s;
     display: flex;
     justify-content: center;
   }
   .navigation__list {
     padding: 0;
     display: flex;
-    height: 70%;
+    height: 100%;
+    padding: 20vh 0;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
