@@ -51,7 +51,10 @@ export default {
   },
   methods: {
     toggleMenuHandler() {
-      this.openMenu ? (this.openMenu = false) : (this.openMenu = true)
+      this.openMenu = !this.openMenu
+      this.openMenu
+        ? (document.body.style.overflow = 'hidden')
+        : (document.body.style.overflow = 'scroll')
     }
   }
 }
@@ -189,19 +192,20 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     bottom: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     right: 0;
     visibility: hidden;
-    display: none;
     background: #fff;
     z-index: 99;
+
     transform: translateY(100vh);
   }
   .navigation--active {
-    transition: transform 0.3s 0.1s ease-in-out, visibility 0s 0s;
     transform: translateY(0px);
     visibility: visible;
+
+    transition: transform 0.3s 0.1s ease-in-out, visibility 0s 0s;
     display: flex;
     justify-content: center;
   }
