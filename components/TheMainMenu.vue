@@ -208,13 +208,14 @@ export default {
   .navigation__list {
     padding: 0;
     display: flex;
-    max-height: 70vh;
+    height: 70%;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
 
   .navigation__item {
+    height: auto;
     .item__link {
       padding: 20px;
       text-decoration: none;
