@@ -1,7 +1,7 @@
 <template>
   <nav class="mainMenuWrapper">
     <nuxt-link to="/" class="logo">
-      <img src="@/assets/logo.svg" class="logo__image" />
+      <the-logo-component class="logo__image" />
     </nuxt-link>
     <button
       class="hamburger"
@@ -208,7 +208,7 @@ export default {
   .navigation__list {
     padding: 0;
     display: flex;
-    height: 70%;
+    height: 70vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -219,7 +219,7 @@ export default {
       padding: 20px;
       text-decoration: none;
       color: #000;
-      font-weight: 600;
+      font-weight: 900;
     }
   }
 }
