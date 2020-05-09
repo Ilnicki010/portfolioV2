@@ -28,11 +28,21 @@
         <li class="navigation__item" @click="toggleMenuHandler">
           <a
             class="item__link"
-            href="https://docs.google.com/document/d/1aMHUhf3c8JjVaWm9NJgwtGxaxgKDkfKA6fSrQGBtLDs/edit"
+            href="https://docs.google.com/document/d/11qVCVtsK8vT869qlDEY4u1T8rINfScHcLXC1Y4QQoGE/edit?usp=sharing"
             target="_blank"
           >
             Resume
-            <i class="fas fa-external-link-alt"></i>
+            <i class="item__icon fas fa-external-link-alt"></i>
+          </a>
+        </li>
+        <li class="navigation__item" @click="toggleMenuHandler">
+          <a
+            class="item__link"
+            href="https://dev.to/dominikilnicki"
+            target="_blank"
+          >
+            Blog
+            <i class="item__icon fas fa-external-link-alt"></i>
           </a>
         </li>
       </ul>
@@ -99,11 +109,13 @@ export default {
     align-items: center;
     height: 100%;
     width: 100%;
-
     &:hover {
       background: rgb(241, 241, 241);
       border-radius: 2px;
     }
+  }
+  .item__icon {
+    margin-left: 10px;
   }
 }
 
