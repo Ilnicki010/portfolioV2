@@ -1,16 +1,40 @@
-[{
+[
+  {
     "id": 1,
     "nameID": "justfindschool",
     "name": "Just Find School",
     "type": "Web application",
     "description": "Web app allowing teenagers to rate their highschool in 4 categories and leave textual opinion. It was used by over 1k useres whos left over 350 rates. I made whole design, back-end and front-end on my own.",
-    "stack": ["VUE JS", "REST API", "Mongo DB", "Node JS + Express", "Adobe XD"],
+    "stack": [
+      "VUE JS",
+      "REST API",
+      "Mongo DB",
+      "Node JS + Express",
+      "Adobe XD"
+    ],
     "mainColor": "#54F2C3",
     "liveDemoLink": "https://justfindschool.com",
     "ghLink": "https://github.com/Ilnicki010/justFindSchool"
   },
   {
     "id": 2,
+    "nameID": "savesmall",
+    "name": "SaveSmall.org",
+    "type": "Web application",
+    "description": "That project was created during the COVID19 Global Hackathon. I was responsible for front end development in 5 people international team. I just a four days we created a service helping small businesses around the world to survive.  After the hackathon, I continued to work on that with other team members.",
+    "stack": [
+      "React Hooks",
+      "SCSS Modules",
+      "Airtable API",
+      "Mapbox",
+      "Google Places API"
+    ],
+    "mainColor": "#78BEED",
+    "liveDemoLink": "https://savesmall.ord",
+    "ghLink": "https://github.com/Ilnicki010/support-local-businesses"
+  },
+  {
+    "id": 3,
     "nameID": "better-librus",
     "name": "Better Librus",
     "type": "Web application",
@@ -21,18 +45,25 @@
     "ghLink": "https://github.com/Ilnicki010/better-librus"
   },
   {
-    "id": 3,
+    "id": 4,
     "nameID": "quiz-fighters",
     "name": "Quiz Fighters",
     "type": "Web application",
     "description": "This project took 1st place in “koduj web app” contents organised by GUS Poland. It is dynamic web application with users authorization. Site makes statistics data more fun and attractive to the young people.",
-    "stack": ["VUE JS", "Firebase Auth", "Mongo DB", "Cloud Functions", "SCSS", "Adobe XD"],
+    "stack": [
+      "VUE JS",
+      "Firebase Auth",
+      "Mongo DB",
+      "Cloud Functions",
+      "SCSS",
+      "Adobe XD"
+    ],
     "mainColor": "#F6F5F8",
     "liveDemoLink": "https://stoic-aryabhata-79d354.netlify.com/",
     "ghLink": "https://github.com/Ilnicki010/kodujwebapp"
   },
   {
-    "id": 4,
+    "id": 5,
     "nameID": "akademiapamieci",
     "name": "Akademia Pamięci",
     "type": "Static website",
@@ -43,7 +74,7 @@
     "ghLink": "https://github.com/Ilnicki010/akademia-pamieci"
   },
   {
-    "id": 5,
+    "id": 6,
     "nameID": "kaligrafowane",
     "name": "Kaligrafowane",
     "type": "Static website",

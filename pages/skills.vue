@@ -15,37 +15,65 @@
             <img
               src="@/assets/stack-logos/javascript.svg"
               class="list__stack-logo"
+              alt="js logo"
             />
           </li>
           <li class="list__element">
-            <img src="@/assets/stack-logos/vue.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/es6.svg"
+              class="list__stack-logo"
+              alt="es6 logo"
+            />
           </li>
           <li class="list__element">
-            <img src="@/assets/stack-logos/nuxt.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/vue.svg"
+              class="list__stack-logo"
+              alt="vue logo"
+            />
           </li>
+          <!-- <li class="list__element">
+            <img
+              src="@/assets/stack-logos/react.svg"
+              class="list__stack-logo"
+              alt="react logo"
+            />
+          </li> -->
           <li class="list__element">
-            <img src="@/assets/stack-logos/es6.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/nuxt.svg"
+              class="list__stack-logo"
+              alt="nuxt logo"
+            />
           </li>
+
           <li class="list__element">
             <img
               src="@/assets/stack-logos/html-5.svg"
               class="list__stack-logo"
+              alt="html logo"
             />
           </li>
           <li class="list__element">
-            <img src="@/assets/stack-logos/sass.svg" class="list__stack-logo" />
+            <img
+              src="@/assets/stack-logos/sass.svg"
+              class="list__stack-logo"
+              alt="sass logo"
+            />
           </li>
           <li class="list__element">UI/UX</li>
           <li class="list__element">
             <img
               src="@/assets/stack-logos/nodejs.svg"
               class="list__stack-logo"
+              alt="node logo"
             />
           </li>
           <li class="list__element">
             <img
               src="@/assets/stack-logos/adobe-xd.svg"
               class="list__stack-logo"
+              alt="adobe xd logo"
             />
           </li>
         </ul>

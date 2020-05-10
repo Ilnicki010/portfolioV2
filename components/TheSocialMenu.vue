@@ -14,7 +14,7 @@
       <li class="list__element">
         <a
           class="element__link"
-          href="https://twitter.com/DominikIlnicki"
+          href="https://dev.to/dominikilnicki"
           target="_blank"
         >
           <svg
