@@ -3,8 +3,12 @@
     <h1 class="contactWrapper__title">Want to talk with me?</h1>
     <h2 class="contactWrapper__subtitle">
       The best way is to ping me via email
-      <a class="contactWrapper__mail" href="mailto:dominik.ilnicki@gmail.com"
+      <a class="contactWrapper__link" href="mailto:dominik.ilnicki@gmail.com"
         >dominik.ilnicki@gmail.com</a
+      >
+      or twitter
+      <a class="contactWrapper__link" href="https://twitter.com/dominikilnicki"
+        >@dominikilnicki</a
       >
     </h2>
   </div>
@@ -29,7 +33,7 @@ export default {
   }
 
   .contactWrapper__subtitle {
-    .contactWrapper__mail {
+    .contactWrapper__link {
       text-decoration: underline;
     }
   }
@@ -37,10 +41,6 @@ export default {
 @media screen and (max-width: 720px) {
   .contactWrapper {
     max-width: 100%;
-    .contactWrapper__title {
-    }
-    .contactWrapper__subtitle {
-    }
   }
 }
 </style>
