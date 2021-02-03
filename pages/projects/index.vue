@@ -72,7 +72,6 @@ export default {
     if (!project) {
       return error({ message: 'Project not found', statusCode: 404 })
     }
-
     return project
   },
   methods: {
@@ -161,7 +160,6 @@ export default {
       }
       .field__label {
         opacity: 0.4;
-
         padding-bottom: 10px;
       }
       .field__stack-list {
@@ -172,7 +170,6 @@ export default {
         .stack-list__element {
           padding: 5px 10px;
           text-align: center;
-
           margin: 1% 2%;
         }
       }

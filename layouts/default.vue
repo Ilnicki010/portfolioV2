@@ -2,13 +2,22 @@
   <div class="layoutWrapper">
     <the-main-menu class="menu" />
     <nuxt class="content" />
-    <footer class="main-footer">© Dominik Ilnicki 2020</footer>
+    <footer class="main-footer">
+      © Dominik Ilnicki
+      {{ currentYear }}
+    </footer>
   </div>
 </template>
 <script>
 import TheMainMenu from '@/components/TheMainMenu'
 export default {
-  components: { TheMainMenu }
+  components: { TheMainMenu },
+  computed: {
+    currentYear() {
+      const date = new Date()
+      return date.getFullYear()
+    }
+  }
 }
 </script>
 <style lang="scss">

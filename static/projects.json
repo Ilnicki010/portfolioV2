@@ -13,7 +13,7 @@
       "Adobe XD"
     ],
     "mainColor": "#54F2C3",
-    "liveDemoLink": "https://justfindschool.com",
+    "liveDemoLink": "https://cranky-wescoff-7d0756.netlify.app",
     "ghLink": "https://github.com/Ilnicki010/justFindSchool"
   },
   {
@@ -30,7 +30,7 @@
       "Google Places API"
     ],
     "mainColor": "#78BEED",
-    "liveDemoLink": "https://savesmall.ord",
+    "liveDemoLink": "https://savesmall.org",
     "ghLink": "https://github.com/Ilnicki010/support-local-businesses"
   },
   {
@@ -61,27 +61,5 @@
     "mainColor": "#F6F5F8",
     "liveDemoLink": "https://stoic-aryabhata-79d354.netlify.com/",
     "ghLink": "https://github.com/Ilnicki010/kodujwebapp"
-  },
-  {
-    "id": 5,
-    "nameID": "akademiapamieci",
-    "name": "Akademia Pamięci",
-    "type": "Static website",
-    "description": "Static website for local business. Created in mobile first approach using Nuxt JS. Designed using Adobe XD tool after interview with client. This site scores near 100 points in all Google Audits categories, and It’s close to perfect in W3C HTML & CSS validator.",
-    "stack": ["VUE JS", "Nuxt JS", "SCSS", "Adobe XD"],
-    "mainColor": "#BDAFFF",
-    "liveDemoLink": "https://akademiapamiecigdynia.pl",
-    "ghLink": "https://github.com/Ilnicki010/akademia-pamieci"
-  },
-  {
-    "id": 6,
-    "nameID": "kaligrafowane",
-    "name": "Kaligrafowane",
-    "type": "Static website",
-    "description": "Static website for local business. Created in mobile first approach using Nuxt JS. Designed using Adobe XD tool after interview with client. This site scores near 100 points in all Google Audits categories, and It’s close to perfect in W3C HTML & CSS validator.",
-    "stack": ["VUE JS", "Nuxt JS", "SCSS", "Adobe XD"],
-    "mainColor": "#F5EBF6",
-    "liveDemoLink": "https://kaligrafowane.pl",
-    "ghLink": "https://github.com/Ilnicki010/kaligrafowane.pl"
   }
 ]
